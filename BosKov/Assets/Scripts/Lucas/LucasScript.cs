@@ -2,17 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LucasScript : MonoBehaviour
+namespace BoxKov
 {
-    // Start is called before the first frame update
-    void Start()
+    public class LucasScript : MonoBehaviour
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

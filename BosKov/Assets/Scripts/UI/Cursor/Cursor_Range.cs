@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-namespace BoseKov
+namespace BosKov
 {
     [ExecuteInEditMode]
     public class Cursor_Range : MonoBehaviour
@@ -13,6 +13,8 @@ namespace BoseKov
         [SerializeField] Image yCursor;
         [SerializeField] TextMeshProUGUI yRange;
         [SerializeField] TextMeshProUGUI xRange;
+
+        Vector3 transY;
 
         int yOutput = 0;
         int xOutput = 0;
@@ -33,7 +35,10 @@ namespace BoseKov
 
         void Y_XRange()
         {
-            //yCursor.transform.localPosition.y = curvePoint.localPosition.y;
+            transY = yCursor.transform.localPosition;
+            transY.y = curvePoint.localPosition.y*5f;
+            yCursor.transform.localPosition = transY;
+
             yOutput = Mathf.RoundToInt(curvePoint.localPosition.y * 1000);
             yRange.text = yOutput.ToString();
 
