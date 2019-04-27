@@ -12,7 +12,9 @@ namespace Boskov
         public bool _useMicrophone;
         public string _selectedDevice;
 
-        public Material target;
+        public SpriteRenderer target;
+        public float clampMin;
+        public float clampMax;
 
         public float updateStep = 0.1f;
         public int sampleDataLength = 1024;
@@ -64,7 +66,13 @@ namespace Boskov
 
             }
 
-            target.color = new Color(1 - clipLoudness*3, 1, 1);
+            Vector3 trans = target.transform.localPosition;
+            trans.y = Mathf.Clamp(trans.y, clampMin, clampMax);
+            trans.y -= clipLoudness * 3;
+            target.transform.localPosition = trans;
+
+            //target.color = new Color(1, 1 - clipLoudness * 3, 1 - clipLoudness * 3);
+            //target.transform.localPosition = new Vector3(target.transform.localPosition.x, trans.y, target.transform.localPosition.z);
             Debug.Log(_audioSource.clip.samples);
             Debug.Log(target.color);
             Debug.Log(_audioSource.clip.frequency);
