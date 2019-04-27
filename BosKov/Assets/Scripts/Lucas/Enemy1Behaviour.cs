@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace BosKov
 {
@@ -43,6 +44,19 @@ namespace BosKov
         private void MoveTowardsTarget()
         {
             transform.position = Vector2.MoveTowards(transform.position, targetPoint.position, enemySpeed * Time.deltaTime);
+        }
+
+        private void OnTriggerEnter2D(Collider2D collider)
+        {
+            if (collider.gameObject.tag == "Player")
+            {
+                DeathProtocol();
+            }
+        }
+
+        private void DeathProtocol()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }

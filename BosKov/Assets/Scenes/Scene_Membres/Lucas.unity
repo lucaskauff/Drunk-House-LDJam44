@@ -112,6 +112,95 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &443020927
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6635329143745361998, guid: 4f1f1b6b10c7b49448251e1bb76f81f1,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635329143745361984, guid: 4f1f1b6b10c7b49448251e1bb76f81f1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635329143745361984, guid: 4f1f1b6b10c7b49448251e1bb76f81f1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635329143745361984, guid: 4f1f1b6b10c7b49448251e1bb76f81f1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635329143745361984, guid: 4f1f1b6b10c7b49448251e1bb76f81f1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635329143745361984, guid: 4f1f1b6b10c7b49448251e1bb76f81f1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635329143745361984, guid: 4f1f1b6b10c7b49448251e1bb76f81f1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635329143745361984, guid: 4f1f1b6b10c7b49448251e1bb76f81f1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635329143745361984, guid: 4f1f1b6b10c7b49448251e1bb76f81f1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635329143745361984, guid: 4f1f1b6b10c7b49448251e1bb76f81f1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635329143745361984, guid: 4f1f1b6b10c7b49448251e1bb76f81f1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635329143745361984, guid: 4f1f1b6b10c7b49448251e1bb76f81f1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635329142925487141, guid: 4f1f1b6b10c7b49448251e1bb76f81f1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635329143553676721, guid: 4f1f1b6b10c7b49448251e1bb76f81f1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635329143553676723, guid: 4f1f1b6b10c7b49448251e1bb76f81f1,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635329143553676723, guid: 4f1f1b6b10c7b49448251e1bb76f81f1,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4f1f1b6b10c7b49448251e1bb76f81f1, type: 3}
 --- !u!1 &546506588
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,7 +215,7 @@ GameObject:
   - component: {fileID: 546506589}
   m_Layer: 0
   m_Name: Enemy1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,8 +234,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mySpriteRend: {fileID: 546506591}
   myCollider: {fileID: 546506590}
-  maxDistTest: 100
+  enemySpeed: 5
   targetPoint: {fileID: 1822198632}
+  isFired: 0
 --- !u!61 &546506590
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -157,7 +247,7 @@ BoxCollider2D:
   m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
