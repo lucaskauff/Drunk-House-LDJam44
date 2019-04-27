@@ -36,7 +36,7 @@ namespace BosKov
         void Y_XRange()
         {
             transY = yCursor.transform.localPosition;
-            transY.y = curvePoint.localPosition.y;
+            transY.y = curvePoint.localPosition.y*5f;
             yCursor.transform.localPosition = transY;
 
             yOutput = Mathf.RoundToInt(curvePoint.localPosition.y * 1000);
