@@ -25,7 +25,7 @@ namespace Boskov.Inputs
             new InputsCode[] {InputsCode.ButtonB}, // Coffenjection    3
             new InputsCode[] {InputsCode.DPadHorizontal}, // Chair     4
             new InputsCode[] {InputsCode.LeftJoystick}, // Generator   5
-            new InputsCode[] {InputsCode.ButtonA}, // Door             6
+            new InputsCode[] {InputsCode.ButtonY}, // Calm             6
             new InputsCode[] {InputsCode.RightJoystick} // Eject       7
          };
 

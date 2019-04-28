@@ -21,11 +21,12 @@ namespace Boskov.Vladimir
             deafness.Initialize();
         }
 
-        public void Sleepyness()
+        public void Sleepyness(float _timePlayed)
         {
             float value = heartBeat.max / heartBeat.current;
             value = Mathf.Clamp(value, 1, 5);
-            sleep.Decrease(sleep.rate * value*Time.deltaTime);
+            float value2 = (1 + (Mathf.Sqrt(_timePlayed) / 36));
+            sleep.Decrease(sleep.rate * value * Time.deltaTime * value2);
         }
 
         public void HeartBeat()

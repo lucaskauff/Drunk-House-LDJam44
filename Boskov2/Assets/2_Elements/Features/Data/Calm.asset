@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8480b9e54f36fb046afef11b3090b398, type: 3}
+  m_Name: Calm
+  m_EditorClassIdentifier: 
+  gameCore: {fileID: 11400000, guid: 81c92601eb95bdc409c51e9937753499, type: 2}
+  duration: 2
+  delay: 0
+  coolDown: 2
+  sleep: 15
+  energy: 0
+  deafness: 0
+  heartbeat: 50
+  gaugeMax: 100
+  gaugeCurrent: 102.68477
+  gaugeSpeed: 15
+  gaugeIncrement: 5
+  used: 0

@@ -10,9 +10,12 @@ namespace Boskov
         public static Events events = new Events();
         [Header("Inputs")]
         public Inputs.InputsTemplate InputsTemplate;
+        public MicroData Voice;
         public Features.Features[] features;
         [Header("Game Data")]
         public Vladimir.VladimirState VladimirState;
+        public int score;
+        public float timePlayed;
     }
 
 }
