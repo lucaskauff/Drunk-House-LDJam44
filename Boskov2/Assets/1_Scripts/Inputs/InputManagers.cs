@@ -13,6 +13,12 @@ namespace Boskov.Inputs
         {
             GameInputsCore.SetBoolTriggerLeft(false);
             GameInputsCore.SetBoolTriggerRight(false);
+            gameCore.InputsTemplate.SetInputs();
+
+            gameCore.features[0].Init();
+            gameCore.features[1].Init();
+            gameCore.features[2].Init();
+            gameCore.features[4].Init();
         }
 
         // Update is called once per frame
@@ -20,8 +26,14 @@ namespace Boskov.Inputs
         {
             gameCore.InputsTemplate.UpdateData(this);
 
+            /*for (int i = 0; i < gameCore.features.Length; i++)
+            {
+                gameCore.features[i].Cast(this);
+            }*/
             gameCore.features[0].Cast(this);
             gameCore.features[1].Cast(this);
+            gameCore.features[2].Cast(this);
+            gameCore.features[4].Cast(this);
         }
     }
 }

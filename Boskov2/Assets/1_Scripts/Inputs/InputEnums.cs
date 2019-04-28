@@ -6,6 +6,7 @@ namespace Boskov.Inputs
 {
     public enum GameInput
     {
+        Voice,
         Water,
         PlayMusic,
         Coffeenjection,

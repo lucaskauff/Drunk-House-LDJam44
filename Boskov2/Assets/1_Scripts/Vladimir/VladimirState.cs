@@ -34,5 +34,10 @@ namespace Boskov.Vladimir
             if (heartBeat.current < 85) heartBeat.Increase(value);
             else heartBeat.Decrease(value);
         }
+
+        public bool GeneratorUsage()
+        {
+            return energy.Decrease(energy.rate/100);
+        }
     }
 }

@@ -21,20 +21,20 @@ namespace Boskov.Features
             }
             else if(used && GameInput.PlayMusic.GetKey())
             {
-
+                AffectDeaf();
             }
             else if(used)
             {
                 used = false;
                 _mono.StartCoroutine(CoolDown());
             }
+
             return false;
         }
 
         IEnumerator Delay(float _delay, MonoBehaviour _mono)
         {
             yield return new WaitForSeconds(_delay);
-            Debug.Log("Music !");
             used = true;
         }
 
@@ -54,9 +54,11 @@ namespace Boskov.Features
             }
         }
 
+
         void AffectDeaf()
         {
             gameCore.VladimirState.deafness.Decrease(deafness * Time.deltaTime);
+            gameCore.VladimirState.sleep.Increase(sleep * Time.deltaTime);
         }
     }
 }

@@ -29,5 +29,10 @@ namespace Boskov.Features
             onCoolDown = false;
         }
 
+        public void Init()
+        {
+            onCoolDown = false;
+        }
+
     }
 }

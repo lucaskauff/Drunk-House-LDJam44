@@ -12,4 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd27a187d4f548c43a6dc5185319ce30, type: 3}
   m_Name: Water1
   m_EditorClassIdentifier: 
-  water: 0
+  gameCore: {fileID: 11400000, guid: 81c92601eb95bdc409c51e9937753499, type: 2}
+  duration: 1
+  delay: 0.2
+  coolDown: 15
+  sleep: 35
+  energy: 0
+  deafness: 0
+  heartbeat: 15

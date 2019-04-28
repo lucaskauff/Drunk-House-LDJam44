@@ -19,6 +19,8 @@ namespace Boskov
         public virtual void EventE() { }
         public virtual void PlayMusic() { }
         public virtual void Coffeenjection() { }
+        public virtual void EjectRight() { }
+        public virtual void EjectLeft() { }
     }
 
     public class Events
@@ -64,6 +66,22 @@ namespace Boskov
             for (int i = 0; i < events.Count; i++)
             {
                 events[i].Coffeenjection();
+            }
+        }
+
+        public void CallEjectLeft()
+        {
+            for (int i = 0; i < events.Count; i++)
+            {
+                events[i].EjectLeft();
+            }
+        }
+
+        public void CallEjectRight()
+        {
+            for (int i = 0; i < events.Count; i++)
+            {
+                events[i].EjectRight();
             }
         }
     }

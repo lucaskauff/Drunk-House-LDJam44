@@ -6,7 +6,7 @@ namespace Boskov.Inputs
 {
     public static class GameInputsCore 
     {
-        public static InputsCode[] assignations = new InputsCode[]
+        /*public static InputsCode[] assignations = new InputsCode[]
         {
             InputsCode.ButtonX, // Water            0
             InputsCode.RightTrigger, // PlayMusic   1
@@ -15,9 +15,21 @@ namespace Boskov.Inputs
             InputsCode.LeftJoystick, // Generator   4
             InputsCode.ButtonA, // Door             5
             InputsCode.RightJoystick // Eject       6
-        };
+        };*/
 
-        public static void EditKeyInput(this GameInput _gameInput, InputsCode _key)
+        public static InputsCode[][] assignations = new InputsCode[][]
+         {
+            new InputsCode[] {InputsCode.ButtonX }, // Voic            0
+            new InputsCode[] {InputsCode.ButtonX }, // Water           1
+            new InputsCode[] {InputsCode.RightTrigger}, // PlayMusic   2
+            new InputsCode[] {InputsCode.ButtonB}, // Coffenjection    3
+            new InputsCode[] {InputsCode.DPadHorizontal}, // Chair     4
+            new InputsCode[] {InputsCode.LeftJoystick}, // Generator   5
+            new InputsCode[] {InputsCode.ButtonA}, // Door             6
+            new InputsCode[] {InputsCode.RightJoystick} // Eject       7
+         };
+
+        public static void EditKeyInput(this GameInput _gameInput, InputsCode[] _key)
         {
             assignations[(int)_gameInput] = _key;
         }
@@ -37,8 +49,28 @@ namespace Boskov.Inputs
 
         public static bool GetKeyDown(this GameInput _input)
         {
-            Debug.Log((assignations[(int)_input]));
-            return GetKeyDown(assignations[(int)_input]);
+            bool getkey = false;
+            bool getkeyDown = false;
+
+            for (int i = 0; i < assignations[(int)_input].Length; i++)
+            {
+                if (GetKeyDown(assignations[(int)_input][i]))
+                {
+                    getkeyDown = true;
+                    break;
+                }
+            }
+
+            for (int i = 0; i < assignations[(int)_input].Length; i++)
+            {
+                if (GetKeyDown(assignations[(int)_input][i]))
+                {
+                    getkey = true;
+                    break;
+                }
+            }
+
+            return (getkey && getkeyDown);
         }
 
         private static bool GetKeyDown(InputsCode _input)
@@ -58,7 +90,6 @@ namespace Boskov.Inputs
                 case InputsCode.ButtonB:
                     return Input.GetKeyDown(KeyCode.JoystickButton1);
                 case InputsCode.ButtonX:
-                    Debug.Log(Input.GetKeyDown(KeyCode.JoystickButton2));
                     return Input.GetKeyDown(KeyCode.JoystickButton2);
                 case InputsCode.ButtonY:
                     return Input.GetKeyDown(KeyCode.JoystickButton3);
@@ -77,12 +108,12 @@ namespace Boskov.Inputs
 
         public static float GetAxis(this GameInput _input)
         {
-            return GetAxis(assignations[(int)_input]);
+            return GetAxis(assignations[(int)_input][0]);
         }
 
         private static float GetAxis(InputsCode _key)
         {
-            if ((int)_key > 5) return 0;
+            //if ((int)_key < 5) return 0;
 
             switch (_key)
             {
@@ -117,7 +148,7 @@ namespace Boskov.Inputs
 
         public static Vector2 GetAxisAsVector(this GameInput _input)
         {
-            return GetAxisAsVector(assignations[(int)_input]);
+            return GetAxisAsVector(assignations[(int)_input][0]);
         }
 
         private static Vector2 GetAxisAsVector(InputsCode _key)
@@ -186,7 +217,13 @@ namespace Boskov.Inputs
 
         public static bool GetKey(this GameInput _input)
         {
-            return GetKey(assignations[(int)_input]);
+            for (int i = 0; i < assignations[(int)_input].Length; i++)
+            {
+                Debug.Log(assignations[(int)_input][i]+" : "+GetKey(assignations[(int)_input][i]));
+                if (!GetKey(assignations[(int)_input][i])) return false;
+            }
+
+            return true;
         }
 
         private static bool GetKey(InputsCode _key)

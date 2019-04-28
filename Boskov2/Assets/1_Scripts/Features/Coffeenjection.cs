@@ -15,6 +15,7 @@ namespace Boskov.Features
         {
             if (GameInput.Coffeenjection.GetKeyDown() && !onCoolDown)
             {
+                Debug.Log("COFFEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
                 onCoolDown = true;
                 _mono.StartCoroutine(Delay(delay, _mono));
                 return true;

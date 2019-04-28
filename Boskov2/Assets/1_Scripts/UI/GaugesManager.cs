@@ -25,6 +25,7 @@ namespace Boskov
             GaugesUpdate();
             gameCore.VladimirState.Sleepyness();
             gameCore.VladimirState.HeartBeat();
+            gameCore.VladimirState.GeneratorUsage();
         }
 
         private void GaugesUpdate()

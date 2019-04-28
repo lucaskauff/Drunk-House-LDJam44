@@ -7,13 +7,14 @@ namespace Boskov.Inputs
     [CreateAssetMenu(fileName ="new Inputs Template", menuName = "Inputs/Template")]
     public class InputsTemplate : ScriptableObject
     {
-        public InputsCode Water;
-        public InputsCode PlayMusic;
-        public InputsCode Coffeenjection;
-        public InputsCode Chair;
-        public InputsCode Generator;
-        public InputsCode Door;
-        public InputsCode Eject;
+        public InputsCode[] Voice;
+        public InputsCode[] Water;
+        public InputsCode[] PlayMusic;
+        public InputsCode[] Coffeenjection;
+        public InputsCode[] Chair;
+        public InputsCode[] Generator;
+        public InputsCode[] Door;
+        public InputsCode[] Eject;
 
         private bool trUsed;
         private bool tlUsed;
@@ -24,15 +25,16 @@ namespace Boskov.Inputs
             TriggersAsKey(_monoBehaviour);
         }
 
-        private void SetInputs()
+        public void SetInputs()
         {
-            GameInputsCore.assignations[0] = Water;
-            GameInputsCore.assignations[1] = PlayMusic;
-            GameInputsCore.assignations[2] = Coffeenjection;
-            GameInputsCore.assignations[3] = Chair;
-            GameInputsCore.assignations[4] = Generator;
-            GameInputsCore.assignations[5] = Door;
-            GameInputsCore.assignations[6] = Eject;
+            GameInputsCore.assignations[0] = Voice;
+            GameInputsCore.assignations[1] = Water;
+            GameInputsCore.assignations[2] = PlayMusic;
+            GameInputsCore.assignations[3] = Coffeenjection;
+            GameInputsCore.assignations[4] = Chair;
+            GameInputsCore.assignations[5] = Generator;
+            GameInputsCore.assignations[6] = Door;
+            GameInputsCore.assignations[7] = Eject;
         }
 
         private void TriggersAsKey(MonoBehaviour _monoBehaviour)
@@ -62,8 +64,6 @@ namespace Boskov.Inputs
         {
             GameInputsCore.SetBoolTriggerRight(true);
             trUsed = true;
-
-            Debug.Log("TriggerRight getkeydown");
 
             while (Input.GetAxis("JS_RightTrigger") > .75f)
             {
