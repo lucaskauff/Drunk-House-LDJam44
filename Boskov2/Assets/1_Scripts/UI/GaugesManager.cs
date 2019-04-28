@@ -11,7 +11,9 @@ namespace Boskov
         [SerializeField] private Image sleep = default;
         [SerializeField] private Image energy = default;
         [SerializeField] private Image deaf = default;
-        [SerializeField] private Image life = default;
+        //[SerializeField] private Image life = default;
+
+        private int heartBeatStatus;
 
         // Start is called before the first frame update
         void Start()
@@ -26,6 +28,7 @@ namespace Boskov
             gameCore.VladimirState.Sleepyness();
             gameCore.VladimirState.HeartBeat();
             gameCore.VladimirState.GeneratorUsage();
+            Cardiogram();
         }
 
         private void GaugesUpdate()
@@ -36,9 +39,25 @@ namespace Boskov
             float amountPower = gameCore.VladimirState.energy.current / gameCore.VladimirState.energy.max;
 
             sleep.fillAmount = amountSleep;
-            life.fillAmount = amountLife;
+            //life.fillAmount = amountLife;
             deaf.fillAmount = amountDeaf;
             energy.fillAmount = amountPower;
+        }
+
+        private void Cardiogram()
+        {
+            float currentHB = gameCore.VladimirState.heartBeat.current;
+
+            if (currentHB == 0) heartBeatStatus = 0;
+            else if (currentHB < 50) heartBeatStatus = 1;
+            else if (currentHB < 100) heartBeatStatus = 2;
+            else if (currentHB < 155) heartBeatStatus = 3;
+            else heartBeatStatus = 4;
+        }
+
+        public float GetHeartBeatPhase()
+        {
+            return heartBeatStatus;
         }
     }
 }
