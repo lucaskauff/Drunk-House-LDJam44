@@ -7,12 +7,13 @@ using UnityEngine.Video;
 [RequireComponent(typeof(VideoPlayer))]
 public class VHSPostProcessEffect : MonoBehaviour
 {
-	public Shader shader;
-	public VideoClip VHSClip;
+    public Shader shader;
+    public VideoClip VHSClip;
 
-	private float _yScanline;
-	private float _xScanline;
-	private Material _material = null;
+    private float _yScanline;
+    private float _xScanline;
+    [SerializeField] [Range (0 ,1)] private int _IsBlacked;
+    private Material _material = null;
 	private VideoPlayer _player;
 
 	void Start()
@@ -43,7 +44,8 @@ public class VHSPostProcessEffect : MonoBehaviour
 		}
 		_material.SetFloat("_yScanline", _yScanline);
 		_material.SetFloat("_xScanline", _xScanline);
-		Graphics.Blit(source, destination, _material);
+        _material.SetFloat("_IsBlacked", _IsBlacked);
+        Graphics.Blit(source, destination, _material);
 	}
 
 	protected void OnDisable()
