@@ -7,12 +7,17 @@ namespace Boskov.Vladimir
     [System.Serializable]
     public class Status
     {
-        public int max; 
-        public float current { get; private set; }
+        public int max;
+        public float current;
+        public float rate;
 
         public bool Increase(float _value)
         {
-            if (current + _value > max && _value > 0) return false;
+            if (current + _value > max && _value > 0)
+            {
+                current = max;
+                return false;
+            }
 
             current += _value;
 
@@ -21,7 +26,11 @@ namespace Boskov.Vladimir
 
         public bool Decrease(float _value)
         {
-            if (current - _value < 0 && _value > 0) return false;
+            if (current - _value < 0 && _value > 0)
+            {
+                current = 0;
+                return false;
+            }
 
             current -= _value;
 

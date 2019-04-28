@@ -7,6 +7,7 @@ namespace Boskov
     [CreateAssetMenu(fileName ="New GameCore", menuName ="GameCore")]
     public class GameCoreData : ScriptableObject
     {
+        public static Events events = new Events();
         [Header("Inputs")]
         public Inputs.InputsTemplate InputsTemplate;
         public Features.Features[] features;

@@ -5,31 +5,32 @@ using UnityEngine.UI;
 
 namespace Boskov
 {
-    [ExecuteInEditMode]
-    public class GaugesManager : MonoBehaviour
+    public class GaugesManager : GameEvents
     {
-        [SerializeField] private GameCoreData gameCore;
-        [SerializeField] private Image sleep;
-        [SerializeField] private Image energy;
-        [SerializeField] private Image deaf;
-        [SerializeField] private Image life;
+        [SerializeField] private GameCoreData gameCore = default;
+        [SerializeField] private Image sleep = default;
+        [SerializeField] private Image energy = default;
+        [SerializeField] private Image deaf = default;
+        [SerializeField] private Image life = default;
 
         // Start is called before the first frame update
         void Start()
         {
-            gameCore.VladimirState.Initialize();
+            //gameCore.VladimirState.Initialize();
         }
 
         // Update is called once per frame
         void Update()
         {
             GaugesUpdate();
+            gameCore.VladimirState.Sleepyness();
+            gameCore.VladimirState.HeartBeat();
         }
 
         private void GaugesUpdate()
         {
             float amountSleep = gameCore.VladimirState.sleep.current / gameCore.VladimirState.sleep.max;
-            float amountLife = gameCore.VladimirState.life.current / gameCore.VladimirState.life.max;
+            float amountLife = gameCore.VladimirState.heartBeat.current / gameCore.VladimirState.heartBeat.max;
             float amountDeaf = gameCore.VladimirState.deafness.current / gameCore.VladimirState.deafness.max;
             float amountPower = gameCore.VladimirState.energy.current / gameCore.VladimirState.energy.max;
 

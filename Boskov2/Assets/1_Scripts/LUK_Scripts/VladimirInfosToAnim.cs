@@ -3,41 +3,44 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class VladimirInfosToAnim : MonoBehaviour
+namespace Boskov.UI
 {
-    [SerializeField] private Animator vladAnim = default;
-    [SerializeField] private Image sleepGFill = default;
-
-    public float degradation = 1;
-    public float sleepAmount = 1;
-
-    private void Update()
+    public class VladimirInfosToAnim : MonoBehaviour
     {
-        sleepAmount = sleepGFill.fillAmount;
+        [SerializeField] private Animator vladAnim = default;
+        [SerializeField] private Image sleepGFill = default;
 
-        if (sleepAmount == degradation)
-        {
-            return;
-        }
-        else if (sleepAmount < degradation && sleepAmount <= degradation - 0.16f)
-        {
-            VladGettingWorse();
-        }
-        else if (sleepAmount > degradation && sleepAmount >= degradation + 0.16f)
-        {
-            VladGettingBetter();
-        }
-    }
+        public float degradation = 1;
+        public float sleepAmount = 1;
 
-    void VladGettingWorse()
-    {
-        vladAnim.SetTrigger("Worse");
-        degradation -= 0.16f;
-    }
+        private void Update()
+        {
+            sleepAmount = sleepGFill.fillAmount;
 
-    void VladGettingBetter()
-    {
-        vladAnim.SetTrigger("Better");
-        degradation += 0.16f;
+            if (sleepAmount == degradation)
+            {
+                return;
+            }
+            else if (sleepAmount < degradation && sleepAmount <= degradation - 0.16f)
+            {
+                VladGettingWorse();
+            }
+            else if (sleepAmount > degradation && sleepAmount >= degradation + 0.16f)
+            {
+                VladGettingBetter();
+            }
+        }
+
+        void VladGettingWorse()
+        {
+            vladAnim.SetTrigger("Worse");
+            degradation -= 0.16f;
+        }
+
+        void VladGettingBetter()
+        {
+            vladAnim.SetTrigger("Better");
+            degradation += 0.16f;
+        }
     }
 }

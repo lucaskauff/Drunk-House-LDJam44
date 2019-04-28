@@ -14,9 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sleep:
     max: 100
+    current: 100
+    rate: 1
   energy:
     max: 100
-  life:
-    max: 100
+    current: 100
+    rate: 0
   deafness:
     max: 100
+    current: 100
+    rate: 0
+  heartBeat:
+    max: 220
+    current: 85
+    rate: 2
