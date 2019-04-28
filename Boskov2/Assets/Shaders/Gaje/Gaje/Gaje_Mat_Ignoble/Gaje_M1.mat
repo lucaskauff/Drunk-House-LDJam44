@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Gaje_M2
+  m_Name: Gaje_M1
   m_Shader: {fileID: 4800000, guid: 5e706a26b896d264e8c88e8964e1eae7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -25,7 +25,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - PixelSnap: 0
-    - _BlinkIntensity: 82.455864
+    - _BlinkIntensity: 678.9482
     - _IsBlinking: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}

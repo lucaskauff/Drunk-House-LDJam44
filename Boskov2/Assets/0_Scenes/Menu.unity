@@ -160,8 +160,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa2f31e9f03277449847d83393404fa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playAnimPlay: {fileID: 0}
-  playAnimExit: {fileID: 0}
+  playButton:
+    selectedImage: {fileID: 21300002, guid: b91e1521c95c7044ea3c77065a31e27e, type: 3}
+    unselectedImage: {fileID: 21300000, guid: b91e1521c95c7044ea3c77065a31e27e, type: 3}
+    selected: 0
+  exitButton:
+    selectedImage: {fileID: 21300002, guid: 5192bc5626b641647a1bce36a43b01d7, type: 3}
+    unselectedImage: {fileID: 21300000, guid: 5192bc5626b641647a1bce36a43b01d7, type: 3}
+    selected: 0
+  playRender: {fileID: 1874740074}
+  exitRender: {fileID: 1147695277}
 --- !u!1 &282947942
 GameObject:
   m_ObjectHideFlags: 0

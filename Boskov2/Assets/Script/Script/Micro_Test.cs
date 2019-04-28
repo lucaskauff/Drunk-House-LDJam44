@@ -5,7 +5,7 @@ using UnityEngine.Audio;
 
 namespace Boskov
 {
-    public class Micro_Test : MonoBehaviour
+    public class Micro_Test : GameEvents
     {
         public Material matMicro;
         public AudioClip _audioClip;
@@ -13,7 +13,6 @@ namespace Boskov
         public bool _useMicrophone;
         public string _selectedDevice;
 
-        public SpriteRenderer target;
         public float clampMin;
         public float clampMax;
 
@@ -45,6 +44,11 @@ namespace Boskov
 
             }
 
+            foreach (var device in Microphone.devices)
+            {
+                Debug.Log("Name: " + device);
+            }
+
             _audioSource.Play();
             clipSampleData = new float[sampleDataLength];
         }
@@ -67,10 +71,6 @@ namespace Boskov
 
             }
 
-            Vector3 trans = target.transform.localPosition;
-            trans.y = Mathf.Clamp(trans.y, clampMin, clampMax);
-            trans.y -= clipLoudness * 3;
-            target.transform.localPosition = trans;
 
             matMicro.SetFloat("_MicroInput", clipLoudness);
 
