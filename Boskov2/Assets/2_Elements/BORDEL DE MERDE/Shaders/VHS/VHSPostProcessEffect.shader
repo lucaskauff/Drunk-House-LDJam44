@@ -2,6 +2,7 @@
 	Properties {
 		_MainTex ("Base (RGB)", 2D) = "white" {}
 		_VHSTex ("Base (RGB)", 2D) = "white" {}
+		_IsBlacked("_IsBlacked", Range(0.0 , 1.0)) = 0
 	}
 
 	SubShader {
@@ -10,6 +11,7 @@
 			Fog { Mode off }
 					
 			CGPROGRAM
+			#define PI 3.141592
 			#pragma vertex vert_img
 			#pragma fragment frag
 			#pragma fragmentoption ARB_precision_hint_fastest 
@@ -20,9 +22,12 @@
 			
 			float _yScanline;
 			float _xScanline;
-			float rand(float3 co){
-			     return frac(sin( dot(co.xyz ,float3(12.9898,78.233,45.5432) )) * 43758.5453);
-			}
+
+			float _IsBlacked;
+
+			float rand(float3 co){return frac(sin( dot(co.xyz ,float3(12.9898,78.233,45.5432) )) * 43758.5453);}
+			float random1(float p) { return frac(sin(p * 127.1) * 437.53) * 1.0 - 0.0; }
+			float random3(float3 p) {return frac(sin(dot(p, float3(127.1, 311.7, 231.4))) * 437.53) * 2.0 - 1.0;}
  
 			fixed4 frag (v2f_img i) : COLOR{
 				fixed4 vhs = tex2D (_VHSTex, i.uv);
@@ -60,7 +65,20 @@
 				float y = ((int)(i.uv.y*240))/240.0;
 				
 				c -= rand(float3(x, y, _xScanline)) * _xScanline / 5;
-				return c + vhs;
+
+				float2 p = float2(i.uv.x , -i.uv.y);
+				p.x += lerp(random3(float3(p.x - fmod(p.x + 1.0,random1(p.y * 100)), p.y, pow(p.y,5))), 0.0, 1 + exp(-30.5 * random1(_Time - fmod(_Time, 0.0001))));
+				float3 color = tex2D(_MainTex, float2(p.x, -p.y)).rgb;
+				//fragColor = float4(color, 1.0);
+			
+				fixed4 Output = c + vhs;
+				fixed4 blacked = float4(color - (Output * 0.9), 1.0);
+				fixed4 notBlacked = Output;
+
+				if(_IsBlacked == 1)
+				{return blacked;}
+				else 
+				{return notBlacked;}
 			}
 			ENDCG
 		}
