@@ -11,7 +11,7 @@ namespace Boskov
         [SerializeField] private Image sleep = default;
         [SerializeField] private Image energy = default;
         [SerializeField] private Image deaf = default;
-        //[SerializeField] private Image life = default;
+        [SerializeField] private Animator life = default;
 
         private int heartBeatStatus;
 
@@ -39,7 +39,7 @@ namespace Boskov
             float amountPower = gameCore.VladimirState.energy.current / gameCore.VladimirState.energy.max;
 
             sleep.fillAmount = amountSleep;
-            //life.fillAmount = amountLife;
+            life.SetInteger("HeartBeat", heartBeatStatus);
             deaf.fillAmount = amountDeaf;
             energy.fillAmount = amountPower;
         }

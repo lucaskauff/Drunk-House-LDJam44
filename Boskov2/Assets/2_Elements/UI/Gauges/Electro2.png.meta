@@ -121,7 +121,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 190
+        y: 608
         width: 33
         height: 19
       alignment: 0
@@ -131,7 +131,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cf1c4643a4212547888fc31e7b916d0
+      spriteID: a0de72c2ff760d04988aac512660819f
       vertices: []
       indices: 
       edges: []
@@ -140,8 +140,8 @@ TextureImporter:
       name: Electro2_1
       rect:
         serializedVersion: 2
-        x: 33
-        y: 190
+        x: 0
+        y: 589
         width: 33
         height: 19
       alignment: 0
@@ -151,7 +151,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3881b3205d151d348a1e845a84048bfb
+      spriteID: dd376047b74efca4dab77d16a820a16e
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,8 @@ TextureImporter:
       name: Electro2_2
       rect:
         serializedVersion: 2
-        x: 66
-        y: 190
+        x: 0
+        y: 570
         width: 33
         height: 19
       alignment: 0
@@ -171,7 +171,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb54a41d2e72b7240b5bfa51a7d609d9
+      spriteID: 1748a157debaefb4bb2515b640ab23ad
       vertices: []
       indices: 
       edges: []
@@ -181,7 +181,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 171
+        y: 551
         width: 33
         height: 19
       alignment: 0
@@ -191,7 +191,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a33d00cd823b46b47b4b3d4674064139
+      spriteID: 09cb35abd46ffcd4b992bb3a1348674f
       vertices: []
       indices: 
       edges: []
@@ -200,8 +200,8 @@ TextureImporter:
       name: Electro2_4
       rect:
         serializedVersion: 2
-        x: 33
-        y: 171
+        x: 0
+        y: 532
         width: 33
         height: 19
       alignment: 0
@@ -211,7 +211,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92abd8b38c29c5448adecbdc2089d550
+      spriteID: 9b5b56666f8716b41b7f340ec91092dc
       vertices: []
       indices: 
       edges: []
@@ -220,8 +220,8 @@ TextureImporter:
       name: Electro2_5
       rect:
         serializedVersion: 2
-        x: 66
-        y: 171
+        x: 0
+        y: 513
         width: 33
         height: 19
       alignment: 0
@@ -231,7 +231,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9be913f444d33246960cb88cd3e220a
+      spriteID: c41d7fbae902aeb4d9a59ea8ea563b7e
       vertices: []
       indices: 
       edges: []
@@ -241,7 +241,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 152
+        y: 494
         width: 33
         height: 19
       alignment: 0
@@ -251,7 +251,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0454d86ab04bd94a99651e2c8d0bc87
+      spriteID: be98c08784074c641ab174ebee7032d0
       vertices: []
       indices: 
       edges: []
@@ -260,8 +260,8 @@ TextureImporter:
       name: Electro2_7
       rect:
         serializedVersion: 2
-        x: 33
-        y: 152
+        x: 0
+        y: 475
         width: 33
         height: 19
       alignment: 0
@@ -271,7 +271,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4ec0d5cb5617244d9c6fa3ebf55d341
+      spriteID: e9744f1a8e313e14dae531e2c06493a1
       vertices: []
       indices: 
       edges: []
@@ -280,8 +280,8 @@ TextureImporter:
       name: Electro2_8
       rect:
         serializedVersion: 2
-        x: 66
-        y: 152
+        x: 0
+        y: 456
         width: 33
         height: 19
       alignment: 0
@@ -291,7 +291,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f35ddee1fb3dabc4abdf6ed2b510a002
+      spriteID: 68d9077e99f20f64394d762a3acd6c5a
       vertices: []
       indices: 
       edges: []
@@ -301,7 +301,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 133
+        y: 437
         width: 33
         height: 19
       alignment: 0
@@ -311,7 +311,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af023943333ebfd449394a9fb03d80ac
+      spriteID: 052eea6ad13252e47b4b3cca9d9c4064
       vertices: []
       indices: 
       edges: []
@@ -320,8 +320,8 @@ TextureImporter:
       name: Electro2_10
       rect:
         serializedVersion: 2
-        x: 33
-        y: 133
+        x: 0
+        y: 418
         width: 33
         height: 19
       alignment: 0
@@ -331,7 +331,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a282654ccb9fea4a954c30cffc48511
+      spriteID: a0c79172967f44f4aac504a6353bc3f2
       vertices: []
       indices: 
       edges: []
@@ -340,8 +340,8 @@ TextureImporter:
       name: Electro2_11
       rect:
         serializedVersion: 2
-        x: 66
-        y: 133
+        x: 0
+        y: 399
         width: 33
         height: 19
       alignment: 0
@@ -351,7 +351,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 794436cb8c211be4081ecbc897d5671b
+      spriteID: b8dcb2dc67805904abcad25bdde20136
       vertices: []
       indices: 
       edges: []
@@ -361,7 +361,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 114
+        y: 380
         width: 33
         height: 19
       alignment: 0
@@ -371,7 +371,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84b0a2fdbb3329f41a681b1fdc936cd0
+      spriteID: e4ca02848231c7c45b35986561a9ee10
       vertices: []
       indices: 
       edges: []
@@ -380,8 +380,8 @@ TextureImporter:
       name: Electro2_13
       rect:
         serializedVersion: 2
-        x: 33
-        y: 114
+        x: 0
+        y: 361
         width: 33
         height: 19
       alignment: 0
@@ -391,7 +391,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 529a3cac129d38d4097be7bdf46b2c85
+      spriteID: fa7b53bb9f39dae41a97aeee41b4630b
       vertices: []
       indices: 
       edges: []
@@ -400,8 +400,8 @@ TextureImporter:
       name: Electro2_14
       rect:
         serializedVersion: 2
-        x: 66
-        y: 114
+        x: 0
+        y: 342
         width: 33
         height: 19
       alignment: 0
@@ -411,7 +411,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3105a7822d621cb4c99e38124626ad5d
+      spriteID: a40e696f2ecd1144fa61d143ef278c41
       vertices: []
       indices: 
       edges: []
@@ -421,7 +421,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 95
+        y: 323
         width: 33
         height: 19
       alignment: 0
@@ -431,7 +431,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79c28c59253a47a4f923d63948857830
+      spriteID: 49530aa97f1a8494799d268abf4a27cb
       vertices: []
       indices: 
       edges: []
@@ -440,8 +440,8 @@ TextureImporter:
       name: Electro2_16
       rect:
         serializedVersion: 2
-        x: 33
-        y: 95
+        x: 0
+        y: 304
         width: 33
         height: 19
       alignment: 0
@@ -451,7 +451,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c5f4bc6cd5e72f49bbace74ea9d5769
+      spriteID: f1cd890056c49f842b428cdd8c6cde2c
       vertices: []
       indices: 
       edges: []
@@ -460,8 +460,8 @@ TextureImporter:
       name: Electro2_17
       rect:
         serializedVersion: 2
-        x: 66
-        y: 95
+        x: 0
+        y: 285
         width: 33
         height: 19
       alignment: 0
@@ -471,7 +471,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7271276b0ac46e14f9cdd6e62395f046
+      spriteID: 6b11c272cf2cbb241b6498231b5a5f18
       vertices: []
       indices: 
       edges: []
@@ -481,7 +481,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 76
+        y: 266
         width: 33
         height: 19
       alignment: 0
@@ -491,7 +491,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a91797fd8132f714da4f41182fc4ec35
+      spriteID: ebf3ee6870f18834eb128d94bf698e96
       vertices: []
       indices: 
       edges: []
@@ -500,8 +500,8 @@ TextureImporter:
       name: Electro2_19
       rect:
         serializedVersion: 2
-        x: 33
-        y: 76
+        x: 0
+        y: 247
         width: 33
         height: 19
       alignment: 0
@@ -511,7 +511,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c7967126bd239b46b0bb39836a96246
+      spriteID: 43d8fdcf48768f54c889ee4e04f2b7d3
       vertices: []
       indices: 
       edges: []
@@ -520,8 +520,8 @@ TextureImporter:
       name: Electro2_20
       rect:
         serializedVersion: 2
-        x: 66
-        y: 76
+        x: 0
+        y: 228
         width: 33
         height: 19
       alignment: 0
@@ -531,7 +531,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 104b25350b039144f8c1b97608fd8554
+      spriteID: 0b07aeb8aba093b4cae0d4c235f6133f
       vertices: []
       indices: 
       edges: []
@@ -541,7 +541,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 57
+        y: 209
         width: 33
         height: 19
       alignment: 0
@@ -551,7 +551,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b111cf642043250459a26ecf116de539
+      spriteID: 83c0d19e99f7c544e92b30f25e4ba76e
       vertices: []
       indices: 
       edges: []
@@ -560,8 +560,8 @@ TextureImporter:
       name: Electro2_22
       rect:
         serializedVersion: 2
-        x: 33
-        y: 57
+        x: 0
+        y: 190
         width: 33
         height: 19
       alignment: 0
@@ -571,7 +571,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88f21a6b7e7301f4784c38efc4678404
+      spriteID: 3da2a004480b92f4991514ef53a3dbe7
       vertices: []
       indices: 
       edges: []
@@ -580,8 +580,8 @@ TextureImporter:
       name: Electro2_23
       rect:
         serializedVersion: 2
-        x: 66
-        y: 57
+        x: 0
+        y: 171
         width: 33
         height: 19
       alignment: 0
@@ -591,7 +591,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43f3baca7b63ceb4cabc9c4cd30f8ce2
+      spriteID: 4e4aae7fb93c816419d23636f386bdd6
       vertices: []
       indices: 
       edges: []
@@ -601,7 +601,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 38
+        y: 152
         width: 33
         height: 19
       alignment: 0
@@ -611,7 +611,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f73a9bb943e55a74680e6751be09cceb
+      spriteID: ec45fb1b68de9d843bca04abdfe5064b
       vertices: []
       indices: 
       edges: []
@@ -620,8 +620,8 @@ TextureImporter:
       name: Electro2_25
       rect:
         serializedVersion: 2
-        x: 33
-        y: 38
+        x: 0
+        y: 133
         width: 33
         height: 19
       alignment: 0
@@ -631,7 +631,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c14cc5b6a18d52419157f421ef9818c
+      spriteID: 25118f269070f89408982b52dd19d141
       vertices: []
       indices: 
       edges: []
@@ -640,8 +640,8 @@ TextureImporter:
       name: Electro2_26
       rect:
         serializedVersion: 2
-        x: 66
-        y: 38
+        x: 0
+        y: 114
         width: 33
         height: 19
       alignment: 0
@@ -651,7 +651,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbeddf6fc8c12f9438f3bfd19d5ca5c3
+      spriteID: 11f19e195c143a54b93eb69632af6159
       vertices: []
       indices: 
       edges: []
@@ -661,7 +661,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 19
+        y: 95
         width: 33
         height: 19
       alignment: 0
@@ -671,7 +671,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45d6612b7f6c8f544adfd710d2b64aa8
+      spriteID: 1b5e3abeba07ebe48b218c6dc076f426
       vertices: []
       indices: 
       edges: []
@@ -680,8 +680,8 @@ TextureImporter:
       name: Electro2_28
       rect:
         serializedVersion: 2
-        x: 33
-        y: 19
+        x: 0
+        y: 76
         width: 33
         height: 19
       alignment: 0
@@ -691,7 +691,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16243c8f9979ed9429bda330de746c14
+      spriteID: ee67c664080c39243b857297019c75db
       vertices: []
       indices: 
       edges: []
@@ -700,7 +700,47 @@ TextureImporter:
       name: Electro2_29
       rect:
         serializedVersion: 2
-        x: 66
+        x: 0
+        y: 57
+        width: 33
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8cf521360ff2974980bddf89001dde9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Electro2_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 38
+        width: 33
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d7e242d0fe9f6f4981d48133d8d3044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Electro2_31
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 19
         width: 33
         height: 19
@@ -711,13 +751,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cb4f40728d080746bdf3d7de15e1d6a
+      spriteID: 792ec4e7e0714df4580691f409fa8dd6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Electro2_30
+      name: Electro2_32
       rect:
         serializedVersion: 2
         x: 0
@@ -731,47 +771,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4e56d52d3d413c4ca47443021d6f9ac
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Electro2_31
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 0
-        width: 33
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 783ead4b6d82b6540b317a7f6688d8b5
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Electro2_32
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 0
-        width: 33
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c03db33689e518743889ec1c6fa2577a
+      spriteID: dc415efd516617b4b99f297475ec333f
       vertices: []
       indices: 
       edges: []
@@ -779,7 +779,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ed0c07dfc3bdd3442b5d34ba163b986b
+    spriteID: 1c3ea92a05b2f9445a4112569a247c26
     vertices: []
     indices: 
     edges: []

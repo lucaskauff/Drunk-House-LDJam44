@@ -34,8 +34,12 @@ namespace Boskov.Features
 
         IEnumerator Delay(float _delay, MonoBehaviour _mono)
         {
+            GameCoreData.events.CallPlayMusic();
+
             yield return new WaitForSeconds(_delay);
             used = true;
+
+            GameCoreData.events.CallStopMusic();
         }
 
         IEnumerator AffectDeafCoroutine()

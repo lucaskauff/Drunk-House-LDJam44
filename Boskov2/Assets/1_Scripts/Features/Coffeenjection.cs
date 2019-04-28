@@ -25,11 +25,15 @@ namespace Boskov.Features
 
         IEnumerator Delay(float _delay, MonoBehaviour _mono)
         {
+            GameCoreData.events.CallCoffeenjectionStart();
+
             yield return new WaitForSeconds(_delay);
 
             _mono.StartCoroutine(CoolDown());
             _mono.StartCoroutine(AffectSleep());
             _mono.StartCoroutine(AffectHB());
+
+            GameCoreData.events.CallCoffeenjectionEnd();
         }
 
         IEnumerator AffectSleep()
