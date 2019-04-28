@@ -6,7 +6,7 @@ using UnityEngine.UI;
 namespace Boskov
 {
     [ExecuteInEditMode]
-    public class Gaje_C : MonoBehaviour
+    public class Gaje_C : GameEvents
     {
         private Color Tint = new Color(1, 1, 1, 1);
 

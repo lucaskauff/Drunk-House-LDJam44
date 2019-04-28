@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Gaje_M1
-  m_Shader: {fileID: 4800000, guid: 5e706a26b896d264e8c88e8964e1eae7, type: 3}
-  m_ShaderKeywords: 
+  m_Name: Unlit_GreyScale
+  m_Shader: {fileID: 4800000, guid: 898061a35da31ca4487405f8d8dcdd8e, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -23,9 +23,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - PixelSnap: 0
-    - _BlinkIntensity: 195.63945
-    - _IsBlinking: 0
+    m_Floats: []
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Dark: {r: 0.188235, g: 0.38431, b: 0.188235, a: 1}
+    - _Darkest: {r: 0.0588235, g: 0.21961, b: 0.0588235, a: 1}
+    - _Ligt: {r: 0.545098, g: 0.6745098, b: 0.0588235, a: 1}
+    - _Ligtest: {r: 0.607843, g: 0.7372549, b: 0.0588235, a: 1}
