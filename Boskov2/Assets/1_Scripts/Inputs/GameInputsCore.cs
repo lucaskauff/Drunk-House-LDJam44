@@ -37,6 +37,7 @@ namespace Boskov.Inputs
 
         public static bool GetKeyDown(this GameInput _input)
         {
+            Debug.Log((assignations[(int)_input]));
             return GetKeyDown(assignations[(int)_input]);
         }
 
@@ -57,6 +58,7 @@ namespace Boskov.Inputs
                 case InputsCode.ButtonB:
                     return Input.GetKeyDown(KeyCode.JoystickButton1);
                 case InputsCode.ButtonX:
+                    Debug.Log(Input.GetKeyDown(KeyCode.JoystickButton2));
                     return Input.GetKeyDown(KeyCode.JoystickButton2);
                 case InputsCode.ButtonY:
                     return Input.GetKeyDown(KeyCode.JoystickButton3);

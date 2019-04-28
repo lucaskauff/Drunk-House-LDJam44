@@ -9,8 +9,9 @@ namespace Boskov
     {
         [Header("Inputs")]
         public Inputs.InputsTemplate InputsTemplate;
-        public Features.Features features;
-        //[Header("Game Data")]
+        public Features.Features[] features;
+        [Header("Game Data")]
+        public Vladimir.VladimirState VladimirState;
     }
 
 }
