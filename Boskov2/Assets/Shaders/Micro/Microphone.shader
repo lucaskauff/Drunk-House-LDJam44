@@ -84,7 +84,7 @@ Shader "Unlit/Microphone"
 				{_IsRed = 0;}*/
 
 				if (_IsRed == 1)
-				{Output = float4(xUp + xDown + c, 0.1 * c, c, 1.0);}
+				{Output = float4(xUp + xDown + c*3, 0.1 * c, 0, 1.0);}
 				if (_IsRed == 0)
 				{Output = float4(float3(xUp + xDown, 2.0 * c, c), 1.0);}
 
