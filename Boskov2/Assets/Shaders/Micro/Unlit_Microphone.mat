@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Gaje_M3
-  m_Shader: {fileID: 4800000, guid: 5e706a26b896d264e8c88e8964e1eae7, type: 3}
+  m_Name: Unlit_Microphone
+  m_Shader: {fileID: 4800000, guid: cf2afc4a09732fe478f559032677fde1, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -24,8 +24,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - PixelSnap: 0
-    - _BlinkIntensity: 82.455864
-    - _IsBlinking: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _IsRed: 0
+    - _MicroInput: 0.00084258616
+    m_Colors: []

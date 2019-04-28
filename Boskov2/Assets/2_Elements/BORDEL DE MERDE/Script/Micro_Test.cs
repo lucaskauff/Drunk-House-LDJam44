@@ -7,6 +7,7 @@ namespace Boskov
 {
     public class Micro_Test : MonoBehaviour
     {
+        public Material matMicro;
         public AudioClip _audioClip;
         private AudioSource _audioSource;
         public bool _useMicrophone;
@@ -71,11 +72,13 @@ namespace Boskov
             trans.y -= clipLoudness * 3;
             target.transform.localPosition = trans;
 
-            //target.color = new Color(1, 1 - clipLoudness * 3, 1 - clipLoudness * 3);
-            //target.transform.localPosition = new Vector3(target.transform.localPosition.x, trans.y, target.transform.localPosition.z);
-            Debug.Log(_audioSource.clip.samples);
-            Debug.Log(target.color);
-            Debug.Log(_audioSource.clip.frequency);
+            matMicro.SetFloat("_MicroInput", clipLoudness);
+
+            if (clipLoudness >= 0.0256066f)
+            {
+                 matMicro.SetFloat("_IsRed",1);
+            }
+            else { matMicro.SetFloat("_IsRed", 0); }
         }
     }
 }
