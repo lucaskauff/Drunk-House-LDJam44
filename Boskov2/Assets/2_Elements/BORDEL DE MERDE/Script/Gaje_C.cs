@@ -14,7 +14,9 @@ namespace Boskov
 
         private Image imageColor;
 
-        public float value;
+        public bool isBlinking = false;
+        private float blink = 10;
+        private float blinkOut = 1;
 
         void Awake()
         {
@@ -24,28 +26,54 @@ namespace Boskov
         // Update is called once per frame
         void Update()
         {
-            /* // Get the current value of the material properties in the renderer.
-             _renderer.GetPropertyBlock(_propBlock);
-             // Assign our new value.
-             _propBlock.SetColor("_Color", Tint * 1.3f);
+            /* if (render != null)
+             {
+                 // Get the current value of the material properties in the renderer.
+                 render.GetPropertyBlock(_propBlock);
+                 // Assign our new value.
+                 blinkOut += Time.deltaTime * blink;
+                 _propBlock.SetFloat("_BlinkIntensity", blinkOut);
 
-             _renderer.SetPropertyBlock(_propBlock);*/
+                 if (isBlinking == true)
+                     _propBlock.SetFloat("_IsBlinking", 1);
+                 else
+                     _propBlock.SetFloat("_IsBlinking", 0);
+
+                 render.SetPropertyBlock(_propBlock);
+             }*/
+
+
 
             ColorGrading();
+            Blinking();
         }
 
         void ColorGrading()
         {
-            if (imageColor.fillAmount >= 0.5f)
+            if (imageColor.fillAmount >= 0.5f) {imageColor.color = new Color(Mathf.Lerp(2, 0, imageColor.fillAmount), 1, 0, 1);}
+            else if (imageColor.fillAmount < 0.5f) { imageColor.color = new Color(1, Mathf.Lerp(0, 1, imageColor.fillAmount * 2), 0, 1); }
+            
+            if(imageColor.fillAmount < 0.25f)
             {
-                imageColor.color = new Color(Mathf.Lerp(1, 0, imageColor.fillAmount * value), 1, 0, 1);
-                value = Mathf.Lerp(0, 1, imageColor.fillAmount / 2);
-
+                isBlinking = true;
             }
-            else if (imageColor.fillAmount < 0.5f)
-                imageColor.color = new Color(1, Mathf.Lerp(0, 1, imageColor.fillAmount * 2), 0, 1);
+            else
+            {
+                isBlinking = false;
+            }
 
-            Debug.Log(imageColor.color);
+        }
+
+        void Blinking()
+        {
+            if (isBlinking == true)
+            {
+                blinkOut += Time.deltaTime * blink;
+                imageColor.material.SetFloat("_BlinkIntensity", blinkOut);
+                imageColor.material.SetFloat("_IsBlinking", 1);
+            }
+            else {imageColor.material.SetFloat("_IsBlinking", 0); }
+            
         }
     }
 }
