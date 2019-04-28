@@ -18,7 +18,10 @@ namespace Boskov
 
         public virtual void EventE() { }
         public virtual void PlayMusic() { }
-        public virtual void Coffeenjection() { }
+        public virtual void StopMusic() { }
+        public virtual void CoffeenjectionStart() { }
+        public virtual void CoffeenjectionEnd() { }
+        public virtual void WaterThrow() { }
         public virtual void EjectRight() { }
         public virtual void EjectLeft() { }
     }
@@ -61,11 +64,35 @@ namespace Boskov
             }
         }
 
-        public void CallCoffeenjection()
+        public void CallStopMusic()
         {
             for (int i = 0; i < events.Count; i++)
             {
-                events[i].Coffeenjection();
+                events[i].StopMusic();
+            }
+        }
+
+        public void CallCoffeenjectionStart()
+        {
+            for (int i = 0; i < events.Count; i++)
+            {
+                events[i].CoffeenjectionStart();
+            }
+        }
+
+        public void CallCoffeenjectionEnd()
+        {
+            for (int i = 0; i < events.Count; i++)
+            {
+                events[i].CoffeenjectionEnd();
+            }
+        }
+
+        public void CallWaterBucket()
+        {
+            for (int i = 0; i < events.Count; i++)
+            {
+                events[i].WaterThrow();
             }
         }
 
