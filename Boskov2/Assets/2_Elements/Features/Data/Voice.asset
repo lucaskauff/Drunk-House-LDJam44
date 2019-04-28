@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4309d6a80579a44499a4ccabc76e6d34, type: 3}
-  m_Name: Template1
+  m_Script: {fileID: 11500000, guid: c8c74e8a7c152d241aca5dffedc6d90b, type: 3}
+  m_Name: Voice
   m_EditorClassIdentifier: 
-  Voice: 0700000015000000
-  Water: 10000000
-  PlayMusic: 070000000d000000
-  Coffeenjection: 0f000000
-  Chair: 0e000000
-  Generator: 08000000
-  Calm: 11000000
-  Eject: 02000000
+  gameCore: {fileID: 0}
+  duration: 0
+  delay: 0
+  coolDown: 0
+  sleep: 0
+  energy: 0
+  deafness: 0
+  heartbeat: 0

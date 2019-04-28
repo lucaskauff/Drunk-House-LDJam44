@@ -12,7 +12,7 @@ namespace Boskov.Inputs
         Coffeenjection,
         Chair,
         Generator,
-        Door,
+        Calm,
         Eject
     }
     public enum AxisCode {LeftJoystickHorizontal, LeftJoystickVerticl, RightJoystickHorizontal, RightJoystickVertical, DPadHorizontal, DPadVertical, LeftTrigger, RightTrigger }

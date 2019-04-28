@@ -7,6 +7,8 @@ namespace Boskov
 {
     public class Micro_Test : GameEvents
     {
+        [SerializeField] private GameCoreData gameCore;
+
         public Material matMicro;
         public AudioClip _audioClip;
         private AudioSource _audioSource;
@@ -77,8 +79,14 @@ namespace Boskov
             if (clipLoudness >= 0.0256066f)
             {
                  matMicro.SetFloat("_IsRed",1);
+                gameCore.Voice.valid = true;
             }
-            else { matMicro.SetFloat("_IsRed", 0); }
+            else
+            {
+                matMicro.SetFloat("_IsRed", 0);
+                gameCore.Voice.valid = false;
+
+            }
         }
     }
 }
