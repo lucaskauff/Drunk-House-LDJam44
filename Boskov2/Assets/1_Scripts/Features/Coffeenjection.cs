@@ -65,7 +65,6 @@ namespace Boskov.Features
                 value = amountHB;
                 yield return null;
             }
-
         }
 
         

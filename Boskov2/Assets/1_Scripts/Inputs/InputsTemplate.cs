@@ -13,7 +13,7 @@ namespace Boskov.Inputs
         public InputsCode[] Coffeenjection;
         public InputsCode[] Chair;
         public InputsCode[] Generator;
-        public InputsCode[] Door;
+        public InputsCode[] Calm;
         public InputsCode[] Eject;
 
         private bool trUsed;
@@ -33,7 +33,7 @@ namespace Boskov.Inputs
             GameInputsCore.assignations[3] = Coffeenjection;
             GameInputsCore.assignations[4] = Chair;
             GameInputsCore.assignations[5] = Generator;
-            GameInputsCore.assignations[6] = Door;
+            GameInputsCore.assignations[6] = Calm;
             GameInputsCore.assignations[7] = Eject;
         }
 

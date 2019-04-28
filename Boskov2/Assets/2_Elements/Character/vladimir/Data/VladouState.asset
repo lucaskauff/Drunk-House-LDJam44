@@ -14,11 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sleep:
     max: 100
+<<<<<<< HEAD
     current: 46.454494
     rate: 1
   energy:
     max: 100
     current: 66.114296
+=======
+    current: 22.626812
+    rate: 1
+  energy:
+    max: 100
+    current: 3.7370422
+>>>>>>> MARCELO_SALASS
     rate: 1
   deafness:
     max: 100
@@ -26,5 +34,9 @@ MonoBehaviour:
     rate: 0
   heartBeat:
     max: 220
+<<<<<<< HEAD
     current: 161.50092
+=======
+    current: 49.95189
+>>>>>>> MARCELO_SALASS
     rate: 2
