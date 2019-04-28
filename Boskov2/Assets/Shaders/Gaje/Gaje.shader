@@ -5,6 +5,9 @@
 		_MainTex("Sprite Texture", 2D) = "white" {}
 		[PerRendererData] _Color("Tint", Color) = (1,1,1,1)
 		[MaterialToggle] PixelSnap("Pixel snap", Float) = 0
+
+		_IsBlinking("_isBlinking", Float) = 0
+		_BlinkIntensity("_BlinkIntensity", Float) = 0
 	}
 
 		SubShader
@@ -64,6 +67,9 @@
 	sampler2D _AlphaTex;
 	float _AlphaSplitEnabled;
 
+	float _IsBlinking;
+	float _BlinkIntensity;
+
 	fixed4 SampleSpriteTexture(float2 uv)
 	{
 		fixed4 color = tex2D(_MainTex, uv);
@@ -80,7 +86,12 @@
 	{
 		fixed4 c = SampleSpriteTexture(IN.texcoord) * IN.color;
 	c.rgb *= c.a;
-	return c;
+	fixed4 outputResult = c ;
+
+	if (_IsBlinking == 1) {outputResult.rgb *= sin(_BlinkIntensity ) + 2;}
+	if (_IsBlinking == 0) { outputResult.rgb = c.rgb; }
+
+	return outputResult;
 	}
 		ENDCG
 	}
