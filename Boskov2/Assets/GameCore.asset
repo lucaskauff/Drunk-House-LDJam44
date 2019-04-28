@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: GameCore
   m_EditorClassIdentifier: 
   InputsTemplate: {fileID: 11400000, guid: 20093498643241942bab4701bf7066f5, type: 2}
+  Voice: {fileID: 11400000, guid: 0b148ad57db546441893403c1a8d4aa7, type: 2}
   features:
   - {fileID: 11400000, guid: 272a00a462042ed469a9456f06d1d384, type: 2}
   - {fileID: 11400000, guid: c874812335124e943941f550e7d052cc, type: 2}
@@ -22,3 +23,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0226e648d1ddcc745b9eb75ab835c68b, type: 2}
   - {fileID: 11400000, guid: 5e69ff54bfff5804392b7a7f1188734b, type: 2}
   VladimirState: {fileID: 11400000, guid: 118c9001b2414b04087d8e9ca136c9cf, type: 2}
+  score: 0
+  timePlayed: 0
