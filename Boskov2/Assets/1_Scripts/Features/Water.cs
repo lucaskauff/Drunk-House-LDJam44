@@ -25,6 +25,8 @@ namespace Boskov.Features
 
         IEnumerator Delay(float _delay, MonoBehaviour _mono)
         {
+            GameCoreData.events.CallWaterBucket();
+
             yield return new WaitForSeconds(_delay);
 
             _mono.StartCoroutine(CoolDown());
