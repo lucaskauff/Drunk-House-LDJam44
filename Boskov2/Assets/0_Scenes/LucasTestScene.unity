@@ -289,6 +289,7 @@ GameObject:
   - component: {fileID: 858581190}
   - component: {fileID: 858581192}
   - component: {fileID: 858581191}
+  - component: {fileID: 858581193}
   m_Layer: 5
   m_Name: EnergyGauge
   m_TagString: Untagged
@@ -327,8 +328,8 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Material: {fileID: 2100000, guid: 6bfdbf90781b43442bc874a12382e7dd, type: 2}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -352,6 +353,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858581189}
   m_CullTransparentMesh: 0
+--- !u!114 &858581193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858581189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b575a0f35d33d4ab23165cf7d3f220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBlinking: 0
 --- !u!1 &1054379844
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,6 +451,7 @@ GameObject:
   - component: {fileID: 1110245614}
   - component: {fileID: 1110245616}
   - component: {fileID: 1110245615}
+  - component: {fileID: 1110245617}
   m_Layer: 5
   m_Name: SleepGauge
   m_TagString: Untagged
@@ -475,8 +490,8 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Material: {fileID: 2100000, guid: 95a461052380a7a4ebcd17ebfd4b6262, type: 2}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -500,6 +515,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1110245613}
   m_CullTransparentMesh: 0
+--- !u!114 &1110245617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110245613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b575a0f35d33d4ab23165cf7d3f220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBlinking: 0
 --- !u!1 &1266567864
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,6 +661,7 @@ GameObject:
   - component: {fileID: 1888107980}
   - component: {fileID: 1888107982}
   - component: {fileID: 1888107981}
+  - component: {fileID: 1888107983}
   m_Layer: 5
   m_Name: DeafGauge
   m_TagString: Untagged
@@ -671,8 +700,8 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Material: {fileID: 2100000, guid: f0fbf02c952d9c048a162844e782ff6d, type: 2}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -696,6 +725,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1888107979}
   m_CullTransparentMesh: 0
+--- !u!114 &1888107983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888107979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b575a0f35d33d4ab23165cf7d3f220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBlinking: 0
 --- !u!1 &1940880148
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,6 +749,7 @@ GameObject:
   - component: {fileID: 1940880149}
   - component: {fileID: 1940880151}
   - component: {fileID: 1940880150}
+  - component: {fileID: 1940880152}
   m_Layer: 5
   m_Name: HeartGauge
   m_TagString: Untagged
@@ -745,8 +788,8 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Material: {fileID: 2100000, guid: 6b9a69b07819cf840a731c4252b1409a, type: 2}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -770,6 +813,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1940880148}
   m_CullTransparentMesh: 0
+--- !u!114 &1940880152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940880148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b575a0f35d33d4ab23165cf7d3f220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBlinking: 0
 --- !u!1 &2037192218
 GameObject:
   m_ObjectHideFlags: 0
