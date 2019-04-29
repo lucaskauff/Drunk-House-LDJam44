@@ -7,6 +7,7 @@ Shader "Unlit/Microphone"
         _MainTex ("Texture", 2D) = "white" {}
 		_MicroInput("MicrophoneVolume", Float) = 0
 		_IsRed("ISRed", Range(0.0, 1.0)) = 0
+        _IsActive("_IsActive", Range(0.0, 1.0)) = 0
     }
     SubShader
     {
@@ -42,6 +43,7 @@ Shader "Unlit/Microphone"
 
 			float _MicroInput;
 			float _IsRed;
+            float _IsActive;
 
             v2f vert (appdata v)
             {
@@ -83,10 +85,17 @@ Shader "Unlit/Microphone"
 				else
 				{_IsRed = 0;}*/
 
-				if (_IsRed == 1)
-				{Output = float4(xUp + xDown + c*3, 0.1 * c, 0, 1.0);}
-				if (_IsRed == 0)
-				{Output = float4(float3(xUp + xDown, 2.0 * c, c), 1.0);}
+                if (_IsActive == 1)
+                {
+                    if (_IsRed == 1)
+                    {Output = float4(xUp + xDown + c*3, 0.1 * c, 0, 1.0);}
+                    if (_IsRed == 0)
+                    {Output = float4(float3(xUp + xDown, 2.0 * c, c), 1.0);}
+                }
+                if (_IsActive == 0)
+                {
+                    Output = float4(xUp + xDown + c, xUp + xDown + c, xUp + xDown + c, 1.0);
+                }
 
 				return Output;
             }

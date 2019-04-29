@@ -13,6 +13,7 @@ namespace Boskov
         public AudioClip _audioClip;
         private AudioSource _audioSource;
         public bool _useMicrophone;
+        public bool _IsActive = false;
         public string _selectedDevice;
 
         public float clampMin;
@@ -48,11 +49,6 @@ namespace Boskov
 
             }
 
-            foreach (var device in Microphone.devices)
-            {
-                Debug.Log("Name: " + device);
-            }
-
             _audioSource.Play();
             clipSampleData = new float[sampleDataLength];
         }
@@ -75,9 +71,6 @@ namespace Boskov
 
             }
 
-
-            matMicro.SetFloat("_MicroInput", clipLoudness);
-
             if (clipLoudness >= 0.0256066f)
             {
                  matMicro.SetFloat("_IsRed",1);
@@ -88,6 +81,17 @@ namespace Boskov
                 matMicro.SetFloat("_IsRed", 0);
                 gameCore.Voice.valid = false;
 
+            }
+
+            if (_IsActive == true) 
+            {
+                matMicro.SetFloat("_IsActive",1);
+                matMicro.SetFloat("_MicroInput", clipLoudness);
+            }
+            else
+            {
+                matMicro.SetFloat("_IsActive",0);
+                matMicro.SetFloat("_MicroInput", 0.001f);
             }
         }
     }

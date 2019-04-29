@@ -3848,6 +3848,7 @@ MonoBehaviour:
   matMicro: {fileID: 2100000, guid: cad3736a8653756428933ae9ba75af61, type: 2}
   _audioClip: {fileID: 0}
   _useMicrophone: 1
+  _IsActive: 0
   _selectedDevice: 
   clampMin: -2.13
   clampMax: -2.51
