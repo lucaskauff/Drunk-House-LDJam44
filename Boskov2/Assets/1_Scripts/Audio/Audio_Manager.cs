@@ -16,6 +16,7 @@ namespace Boskov
         [SerializeField] private AudioSource whiteNoiseWAV;
         [SerializeField] private AudioSource cynballeWAV;
         [SerializeField] private AudioSource autistWAV;
+        [SerializeField] private AudioSource CalmWAV;
 
         private bool generatorB;
         private bool autistB;
@@ -32,6 +33,8 @@ namespace Boskov
         {
             LoopAudio();
             SingleAudio();
+
+            Music.pitch = (gameCore.VladimirState.sleep.current * 0.01f) +0.5f;
         }
 
         void LoopAudio()
@@ -91,6 +94,12 @@ namespace Boskov
             {
                 StartCoroutine(Cafe());
             }
+
+            if(GameInput.Calm.GetKeyDown()) 
+            {
+                CalmWAV.Play();
+            }
+
         }
 
         IEnumerator Cynballe()
