@@ -21,7 +21,7 @@ namespace Boskov.Features
         {
             if (used) UpdateValue(_mono);
 
-            if (!onCoolDown && !used && GameInput.Calm.GetKeyDown()) StartGauge();
+            if (!onCoolDown && !used && GameInput.Calm.GetKeyDown() && gameCore.VladimirState.energy.current > energy) StartGauge();
 
             else if (GameInput.Calm.GetKeyDown() && used) GaugePush();
 
@@ -67,6 +67,7 @@ namespace Boskov.Features
             Debug.Log("Succeed");
             _mono.StartCoroutine(AffectSleep());
             _mono.StartCoroutine(AffectHB());
+            _mono.StartCoroutine(EnergyCost());
         }
 
         IEnumerator AffectSleep()
@@ -84,9 +85,6 @@ namespace Boskov.Features
                 value = amountInjected;
                 yield return null;
             }
-
-            Debug.Log("fini1");
-
         }
 
         IEnumerator AffectHB()
@@ -103,10 +101,23 @@ namespace Boskov.Features
                 value = amountHB;
                 yield return null;
             }
-
-            Debug.Log("fini2");
         }
 
+        IEnumerator EnergyCost()
+        {
+            float time = 0;
+            float amountInjected = 0;
+            float value = 0;
 
+            while (time < duration)
+            {
+                time += (Time.deltaTime / duration);
+                Debug.Log(time);
+                amountInjected = Mathf.SmoothStep(0, sleep, time);
+                if (!gameCore.VladimirState.energy.Decrease(amountInjected - value)) break;
+                value = amountInjected;
+                yield return null;
+            }
+        }
     }
 }

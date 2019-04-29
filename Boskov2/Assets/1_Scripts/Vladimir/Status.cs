@@ -42,5 +42,10 @@ namespace Boskov.Vladimir
             current = max;
         }
 
+        public void Initialize(int _value)
+        {
+            current = _value;
+        }
+
     }
 }
