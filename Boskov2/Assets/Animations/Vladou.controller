@@ -21,6 +21,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
+  - m_Name: Degradation
+    m_Type: 3
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -64,9 +70,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Better
-    m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: Degradation
+    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102863331357983324}
   m_Solo: 0
@@ -89,8 +95,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Better
+  - m_ConditionMode: 3
+    m_ConditionEvent: Degradation
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102895483932204936}
@@ -114,9 +120,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Worse
-    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: Degradation
+    m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102863331357983324}
   m_Solo: 0
@@ -139,9 +145,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Worse
-    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: Degradation
+    m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102895483932204936}
   m_Solo: 0
@@ -164,9 +170,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Better
-    m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: Degradation
+    m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102785224032709366}
   m_Solo: 0
@@ -189,9 +195,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Better
-    m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: Degradation
+    m_EventTreshold: 4
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102773717899438720}
   m_Solo: 0
@@ -214,9 +220,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Worse
-    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: Degradation
+    m_EventTreshold: 5
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102273993409871612}
   m_Solo: 0
@@ -239,9 +245,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Worse
-    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: Degradation
+    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102747122712523866}
   m_Solo: 0
@@ -264,9 +270,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Worse
-    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: Degradation
+    m_EventTreshold: 4
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102785224032709366}
   m_Solo: 0
@@ -289,9 +295,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Better
-    m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: Degradation
+    m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102273993409871612}
   m_Solo: 0

@@ -51,8 +51,9 @@ namespace Boskov
             if (currentHB == 0) heartBeatStatus = 0;
             else if (currentHB < 50) heartBeatStatus = 1;
             else if (currentHB < 100) heartBeatStatus = 2;
-            else if (currentHB < 155) heartBeatStatus = 3;
-            else heartBeatStatus = 4;
+            else if (currentHB < 145) heartBeatStatus = 3;
+            else if (currentHB < 190) heartBeatStatus = 4;
+            else heartBeatStatus = 5;
         }
 
         public float GetHeartBeatPhase()

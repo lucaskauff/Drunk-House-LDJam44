@@ -39,13 +39,13 @@ namespace Boskov.Features
 
         IEnumerator AffectSleep()
         {
-            time = 0;
-            amountInjected = 0;
+            float time = 0;
+            float amountInjected = 0;
             float value = 0;
 
-            while (amountInjected < sleep)
+            while (time < duration)
             {
-                time += Time.deltaTime / duration;
+                time += (Time.deltaTime / duration);
                 amountInjected = Mathf.SmoothStep(0, sleep, time);
                 if (!gameCore.VladimirState.sleep.Increase(amountInjected-value)) break;
                 value = amountInjected;
@@ -56,11 +56,13 @@ namespace Boskov.Features
 
         IEnumerator AffectHB()
         {
+            float time = 0;
             float value = 0;
             float amountHB = 0;
 
-            while (amountInjected < sleep)
+            while (time < duration)
             {
+                time += (Time.deltaTime / duration);
                 amountHB = Mathf.SmoothStep(0, heartbeat, time);
                 if (!gameCore.VladimirState.heartBeat.Increase(amountHB - value)) break;
                 value = amountHB;

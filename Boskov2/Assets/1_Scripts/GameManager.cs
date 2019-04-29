@@ -7,10 +7,12 @@ namespace Boskov
     public class GameManager : MonoBehaviour
     {
         [SerializeField] private GameCoreData gameCore;
+        [SerializeField] private GameObject finish;
 
         private void Awake()
         {
             gameCore.LoadSave();
+            gameCore.finished = false;
         }
 
         // Start is called before the first frame update
@@ -24,7 +26,7 @@ namespace Boskov
         void Update()
         {
             if(!gameCore.finished)IncreaseScore();
-            if (gameCore.VladimirState.heartBeat.current >= 220 || gameCore.VladimirState.heartBeat.current <= 0 || gameCore.VladimirState.sleep.current <= 0) StartCoroutine(Finish());
+            if ((gameCore.VladimirState.heartBeat.current >= 220 || gameCore.VladimirState.heartBeat.current <= 0 || gameCore.VladimirState.sleep.current <= 0) && !gameCore.finished) StartCoroutine(Finish());
         }
 
         private void IncreaseScore()
@@ -47,6 +49,7 @@ namespace Boskov
             }
 
             Time.timeScale = 0;
+            if(finish != null) finish.SetActive(true);
         }
 
 

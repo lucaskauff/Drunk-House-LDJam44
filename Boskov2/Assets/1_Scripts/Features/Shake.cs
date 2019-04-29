@@ -35,6 +35,8 @@ namespace Boskov.Features
                 Activate(_mono);
                 used = false;
 
+                GameCoreData.events.CallCalmDownAppear();
+
                 _mono.StartCoroutine(CoolDown());
 
                 return;
@@ -79,7 +81,6 @@ namespace Boskov.Features
             while (time < duration)
             {
                 time += (Time.deltaTime / duration);
-                Debug.Log(time);
                 amountInjected = Mathf.SmoothStep(0, sleep, time);
                 if (!gameCore.VladimirState.sleep.Decrease(amountInjected - value)) break;
                 value = amountInjected;
@@ -112,7 +113,6 @@ namespace Boskov.Features
             while (time < duration)
             {
                 time += (Time.deltaTime / duration);
-                Debug.Log(time);
                 amountInjected = Mathf.SmoothStep(0, sleep, time);
                 if (!gameCore.VladimirState.energy.Decrease(amountInjected - value)) break;
                 value = amountInjected;

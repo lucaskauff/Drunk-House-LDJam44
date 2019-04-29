@@ -24,6 +24,7 @@ namespace Boskov
         public virtual void WaterThrow() { }
         public virtual void EjectRight() { }
         public virtual void EjectLeft() { }
+        public virtual void CalmDownAppear() { }
     }
 
     public class Events
@@ -109,6 +110,14 @@ namespace Boskov
             for (int i = 0; i < events.Count; i++)
             {
                 events[i].EjectRight();
+            }
+        }
+
+        public void CallCalmDownAppear()
+        {
+            for (int i = 0; i < events.Count; i++)
+            {
+                events[i].CalmDownAppear();
             }
         }
     }

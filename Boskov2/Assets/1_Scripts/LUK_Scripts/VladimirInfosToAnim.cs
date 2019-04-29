@@ -10,37 +10,9 @@ namespace Boskov.UI
         [SerializeField] private Animator vladAnim = default;
         [SerializeField] private Image sleepGFill = default;
 
-        public float degradation = 1;
-        public float sleepAmount = 1;
-
         private void Update()
         {
-            sleepAmount = sleepGFill.fillAmount;
-
-            if (sleepAmount == degradation)
-            {
-                return;
-            }
-            else if (sleepAmount < degradation && sleepAmount <= degradation - 0.16f)
-            {
-                VladGettingWorse();
-            }
-            else if (sleepAmount > degradation && sleepAmount >= degradation + 0.16f)
-            {
-                VladGettingBetter();
-            }
-        }
-
-        void VladGettingWorse()
-        {
-            vladAnim.SetTrigger("Worse");
-            degradation -= 0.16f;
-        }
-
-        void VladGettingBetter()
-        {
-            vladAnim.SetTrigger("Better");
-            degradation += 0.16f;
+            vladAnim.SetInteger("Degradation", Mathf.RoundToInt(sleepGFill.fillAmount * 6));
         }
     }
 }
