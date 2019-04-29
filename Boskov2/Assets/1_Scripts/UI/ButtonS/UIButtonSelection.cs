@@ -9,6 +9,7 @@ namespace Boskov.UI
     {
         [SerializeField] private ButtonUI[] buttons;
         [SerializeField] private Image[] buttonRenderers;
+        public bool isUsed;
 
         private bool onCoolDown;
         private int index;
@@ -21,8 +22,11 @@ namespace Boskov.UI
         // Update is called once per frame
         void Update()
         {
-            IndexManager();
-            Selection();
+            if (isUsed)
+            {
+                IndexManager();
+                Selection();
+            }
         }
 
         private bool Select()

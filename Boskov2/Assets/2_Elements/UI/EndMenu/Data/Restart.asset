@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce5c2b5898a47f4185d9412bb0c0188, type: 3}
   m_Name: Restart
   m_EditorClassIdentifier: 
-  selectedImage: {fileID: 0}
-  unselectedImage: {fileID: 0}
-  selected: 0
+  selectedImage: {fileID: 21300002, guid: 4965f90ccdfb56c43b9e07f21b66b97a, type: 3}
+  unselectedImage: {fileID: 21300000, guid: 4965f90ccdfb56c43b9e07f21b66b97a, type: 3}
+  selected: 1
