@@ -2,25 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Boskov
+namespace Boskov.Scores
 {
-    public class SaveScore : GameEvents
+    [System.Serializable]
+    public class SaveScore
     {
-        [SerializeField] private GameCoreData GameCore;
+        public Score[] score;
 
-        [SerializeField] private GameObject gameOver;
-        // Start is called before the first frame update
-        void Start()
+        public SaveScore(Score[] _score)
         {
-
+            score = _score;
         }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-
-
+        
     }
 }

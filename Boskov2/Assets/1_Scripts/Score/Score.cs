@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Boskov.Scores
 {
+    [System.Serializable]
     public class Score
     {
         public string name;

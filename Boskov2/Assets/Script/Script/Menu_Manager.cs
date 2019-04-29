@@ -34,8 +34,6 @@ namespace Boskov
 
         private void SelectButton()
         {
-            
-            
                 if (Input.GetAxis("JS_LeftStick_X_Axis") < 0 || Input.GetAxis("JS_RightStick_X_Axis") < 0)
                 {
                     playButton.selected = true;
@@ -46,8 +44,6 @@ namespace Boskov
                     playButton.selected = false;
                     exitButton.selected = true;
                 }
-
-
         }
 
         private bool Select()

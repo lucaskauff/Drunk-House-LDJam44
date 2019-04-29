@@ -34,28 +34,42 @@ namespace Boskov
                 return;
             }
 
-            scores = JsonUtility.FromJson<Score[]>(File.ReadAllText(filePath));
+            SaveScore save = new SaveScore(JsonUtility.FromJson<Score[]>(File.ReadAllText(filePath)));
+
+            scores = save.score;
         }
 
         public void SaveScore(Score _score)
         {
             List<Score> tmp = scores.ToList();
-            tmp.Add(_score);
 
-            tmp = (List<Score>)tmp.OrderBy(item => item.score);
+
+            for (int i = 0; i < tmp.Count; i++)
+            {
+                if(_score.score > tmp[i].score)
+                {
+                    tmp.Insert(i, _score);
+                }
+                else if (i == tmp.Count-1)
+                {
+                    tmp.Add(_score);
+                    break;
+                }
+            }
 
             while (tmp.Count>10)
             {
                 tmp.RemoveAt(tmp.Count - 1);
             }
 
-            scores = tmp.ToArray();
+            SaveScore save = new SaveScore(tmp.ToArray());
+            scores = save.score;
 
             string filePath = Application.persistentDataPath + "/score.json";
 
             Debug.Log("Saving game at: " + filePath + ".");
-
-            File.WriteAllText(filePath, JsonUtility.ToJson(scores, true));
+            Debug.Log(JsonUtility.ToJson(save));
+            File.WriteAllText(filePath, JsonUtility.ToJson(save, true));
 
         }
     }
