@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using Boskov.Inputs;
 
 namespace Boskov
 {
@@ -93,6 +94,9 @@ namespace Boskov
                 matMicro.SetFloat("_IsActive",0);
                 matMicro.SetFloat("_MicroInput", 0.001f);
             }
+
+            if(GameInput.Voice.GetKey()) {_IsActive = true;}
+            else {_IsActive = false;}
         }
     }
 }
