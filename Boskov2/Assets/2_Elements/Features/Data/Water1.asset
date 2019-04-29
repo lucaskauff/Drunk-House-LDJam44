@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameCore: {fileID: 11400000, guid: 81c92601eb95bdc409c51e9937753499, type: 2}
   duration: 1
-  delay: 0.2
+  delay: 2
   coolDown: 15
   sleep: 35
   energy: 20
   deafness: 0
   heartbeat: 15
+  onCoolDown: 0

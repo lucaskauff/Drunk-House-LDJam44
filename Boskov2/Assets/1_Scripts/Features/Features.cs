@@ -18,7 +18,7 @@ namespace Boskov.Features
         public float deafness;
         public float heartbeat;
 
-        protected bool onCoolDown;
+        public bool onCoolDown;
 
         public abstract bool Cast(MonoBehaviour _mono);
 

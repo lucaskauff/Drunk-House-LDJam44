@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Echap : MonoBehaviour
 {
+    [SerializeField] GameObject rawImageUi;
+    [SerializeField] GameObject micro;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +21,14 @@ public class Echap : MonoBehaviour
             if (Time.timeScale == 1)
             {
                 Time.timeScale = 0;
+                rawImageUi.SetActive(true);
+                micro.SetActive(false);
             }
             else
             {
                 Time.timeScale = 1;
+                rawImageUi.SetActive(false);
+                micro.SetActive(true);
             }
         }
     }

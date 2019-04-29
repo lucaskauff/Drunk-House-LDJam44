@@ -19,7 +19,8 @@ MonoBehaviour:
   sleep: 15
   energy: 20
   deafness: 0
-  heartbeat: 50
+  heartbeat: 80
+  onCoolDown: 0
   gaugeMax: 100
   gaugeCurrent: 5.4017744
   gaugeSpeed: 15
