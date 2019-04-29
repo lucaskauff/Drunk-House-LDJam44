@@ -7,7 +7,11 @@ namespace Boskov
     public class GameManager : MonoBehaviour
     {
         [SerializeField] private GameCoreData gameCore;
-        
+
+        private void Awake()
+        {
+            gameCore.LoadSave();
+        }
 
         // Start is called before the first frame update
         void Start()
@@ -27,6 +31,8 @@ namespace Boskov
         {
             gameCore.timePlayed += Time.deltaTime;
             gameCore.score = (Mathf.Pow(gameCore.timePlayed, 2)/60);
+
+            gameCore.scoreRounded = Mathf.CeilToInt(gameCore.score);
         }
 
         private IEnumerator Finish()

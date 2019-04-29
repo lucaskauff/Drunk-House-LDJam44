@@ -25,7 +25,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - PixelSnap: 0
-    - _BlinkIntensity: 814.27545
+    - _BlinkIntensity: 167.43665
     - _IsBlinking: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
