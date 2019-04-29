@@ -36,14 +36,14 @@ public class StartAnimation : MonoBehaviour
 
     private void anim()
     {
-        float value = curve.GetValueFrom(gameAnim.transform.localPosition.x) + 1.002f;
+        float value = curve.GetValueFrom(gameAnim.transform.localPosition.x) + 1.008f;
         gameAnim.transform.Translate(Vector2.right * value * speed);
         overAnim.transform.Translate(Vector2.left * value * speed);
     }
 
     private IEnumerator StopThis()
     {
-        yield return new WaitForSecondsRealtime(2);
+        yield return new WaitForSecondsRealtime(4);
 
         ResetPos();
         gameObject.SetActive(false);

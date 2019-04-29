@@ -74,7 +74,6 @@ namespace Boskov.Features
             while (time < duration)
             {
                 time += (Time.deltaTime / duration);
-                Debug.Log(time);
                 amountInjected = Mathf.SmoothStep(0, sleep, time);
                 if (!gameCore.VladimirState.energy.Decrease(amountInjected - value)) break;
                 value = amountInjected;
