@@ -26,8 +26,10 @@ namespace Boskov
         private float clipLoudness;
         private float[] clipSampleData;
 
+        public int whichMic;
 
-        // Start is called before the first frame update
+
+
         void Start()
         {
             _audioSource = GetComponent<AudioSource>();
@@ -55,7 +57,7 @@ namespace Boskov
             clipSampleData = new float[sampleDataLength];
         }
 
-        // Update is called once per frame
+
         void Update()
         {
 
@@ -63,13 +65,13 @@ namespace Boskov
             if (currentUpdateTime >= updateStep)
             {
                 currentUpdateTime = 0f;
-                _audioSource.clip.GetData(clipSampleData, _audioSource.timeSamples); //I read 1024 samples, which is about 80 ms on a 44khz stereo clip, beginning at the current sample position of the clip.
+                _audioSource.clip.GetData(clipSampleData, _audioSource.timeSamples); 
                 clipLoudness = 0f;
                 foreach (var sample in clipSampleData)
                 {
                     clipLoudness += Mathf.Abs(sample);
                 }
-                clipLoudness /= sampleDataLength; //clipLoudness is what you are looking for
+                clipLoudness /= sampleDataLength;
 
             }
 
