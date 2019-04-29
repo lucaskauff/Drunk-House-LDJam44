@@ -32,6 +32,7 @@ namespace Boskov.Features
             _mono.StartCoroutine(CoolDown());
             _mono.StartCoroutine(AffectSleep());
             _mono.StartCoroutine(AffectHB());
+            _mono.StartCoroutine(EnergyCost());
 
             GameCoreData.events.CallCoffeenjectionEnd();
         }
@@ -67,6 +68,22 @@ namespace Boskov.Features
             }
         }
 
-        
+        IEnumerator EnergyCost()
+        {
+            float time = 0;
+            float amountInjected = 0;
+            float value = 0;
+
+            while (time < duration)
+            {
+                time += (Time.deltaTime / duration);
+                amountInjected = Mathf.SmoothStep(0, sleep, time);
+                if (!gameCore.VladimirState.energy.Decrease(amountInjected - value)) break;
+                value = amountInjected;
+                yield return null;
+            }
+        }
+
+
     }
 }

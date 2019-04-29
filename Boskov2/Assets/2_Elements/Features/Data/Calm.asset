@@ -16,13 +16,13 @@ MonoBehaviour:
   duration: 2
   delay: 0
   coolDown: 2
-  sleep: 10
-  energy: 0
+  sleep: 15
+  energy: 20
   deafness: 0
   heartbeat: 80
   onCoolDown: 0
   gaugeMax: 100
-  gaugeCurrent: 100.52906
+  gaugeCurrent: 5.4017744
   gaugeSpeed: 15
   gaugeIncrement: 5
-  used: 0
+  used: 1

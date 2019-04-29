@@ -13,7 +13,7 @@ namespace Boskov.Features
 
         public override bool Cast(MonoBehaviour _mono)
         {
-            if (GameInput.Water.GetKeyDown() && !onCoolDown)
+            if (GameInput.Water.GetKeyDown() && !onCoolDown && gameCore.VladimirState.energy.current > energy)
             {
                 Debug.Log("Plouf");
                 onCoolDown = true;
@@ -32,6 +32,7 @@ namespace Boskov.Features
             _mono.StartCoroutine(CoolDown());
             _mono.StartCoroutine(AffectSleep());
             _mono.StartCoroutine(AffectHB());
+            _mono.StartCoroutine(EnergyCost());
         }
 
         IEnumerator AffectSleep()
@@ -60,6 +61,22 @@ namespace Boskov.Features
                 amountHB = Mathf.SmoothStep(0, heartbeat, time);
                 if (!gameCore.VladimirState.heartBeat.Increase(amountHB - value)) break;
                 value = amountHB;
+                yield return null;
+            }
+        }
+
+        IEnumerator EnergyCost()
+        {
+            float time = 0;
+            float amountInjected = 0;
+            float value = 0;
+
+            while (time < duration)
+            {
+                time += (Time.deltaTime / duration);
+                amountInjected = Mathf.SmoothStep(0, sleep, time);
+                if (!gameCore.VladimirState.energy.Decrease(amountInjected - value)) break;
+                value = amountInjected;
                 yield return null;
             }
         }

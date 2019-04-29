@@ -219,7 +219,6 @@ namespace Boskov.Inputs
         {
             for (int i = 0; i < assignations[(int)_input].Length; i++)
             {
-                Debug.Log(assignations[(int)_input][i]+" : "+GetKey(assignations[(int)_input][i]));
                 if (!GetKey(assignations[(int)_input][i])) return false;
             }
 

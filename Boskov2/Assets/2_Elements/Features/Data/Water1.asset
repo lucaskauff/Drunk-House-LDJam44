@@ -17,7 +17,7 @@ MonoBehaviour:
   delay: 2
   coolDown: 15
   sleep: 35
-  energy: 0
+  energy: 20
   deafness: 0
   heartbeat: 15
   onCoolDown: 0

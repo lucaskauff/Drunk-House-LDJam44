@@ -18,7 +18,7 @@ namespace Boskov
         // Start is called before the first frame update
         void Start()
         {
-            //gameCore.VladimirState.Initialize();
+            gameCore.VladimirState.Initialize();
         }
 
         // Update is called once per frame
