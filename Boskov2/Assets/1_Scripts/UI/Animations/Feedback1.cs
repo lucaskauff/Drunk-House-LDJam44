@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Boskov
 {
-    public class Feedback1 : MonoBehaviour
+    public class Feedback1 : GameEvents
     {
         [SerializeField] private GameCoreData gameCoreData = default;
         [SerializeField] private Animator myAnim = default;

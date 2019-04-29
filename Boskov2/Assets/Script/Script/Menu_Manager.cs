@@ -11,8 +11,10 @@ namespace Boskov
         [SerializeField] private UIButton playButton;
         [SerializeField] private UIButton exitButton;
 
-        [SerializeField] private Image playRender;
+        [SerializeField] private Image playRender; 
         [SerializeField] private Image exitRender;
+        [SerializeField] private bool twoImage;
+        [SerializeField] private bool threeImage;
 
 
         // Start is called before the first frame update
@@ -32,16 +34,20 @@ namespace Boskov
 
         private void SelectButton()
         {
-            if (Input.GetAxis("JS_LeftStick_X_Axis") < 0 || Input.GetAxis("JS_RightStick_X_Axis") < 0)
-            {
-                playButton.selected = true;
-                exitButton.selected = false;
-            }
-            else if (Input.GetAxis("JS_LeftStick_X_Axis") > 0 || Input.GetAxis("JS_RightStick_X_Axis") > 0)
-            {
-                playButton.selected = false;
-                exitButton.selected = true;
-            }
+            
+            
+                if (Input.GetAxis("JS_LeftStick_X_Axis") < 0 || Input.GetAxis("JS_RightStick_X_Axis") < 0)
+                {
+                    playButton.selected = true;
+                    exitButton.selected = false;
+                }
+                else if (Input.GetAxis("JS_LeftStick_X_Axis") > 0 || Input.GetAxis("JS_RightStick_X_Axis") > 0)
+                {
+                    playButton.selected = false;
+                    exitButton.selected = true;
+                }
+
+
         }
 
         private bool Select()
