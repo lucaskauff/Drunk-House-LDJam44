@@ -74,7 +74,7 @@ namespace Boskov
         public void ChangeScene()
         {
             Debug.Log("Play Scene");
-            //SceneManager.LoadSceneAsync(1);
+            SceneManager.LoadSceneAsync(1);
         }
 
         private void ImagesManager(Image _render, UIButton _button)

@@ -16,7 +16,7 @@ namespace Boskov.UI
         // Start is called before the first frame update
         void Start()
         {
-
+            Time.timeScale = 1;
         }
 
         // Update is called once per frame
@@ -86,6 +86,18 @@ namespace Boskov.UI
             yield return new WaitForSeconds(.5f);
 
             onCoolDown = false;
+        }
+
+        public void Activate()
+        {
+            StartCoroutine(Delay());
+        }
+
+        IEnumerator Delay()
+        {
+            yield return new WaitForSeconds(1);
+
+            isUsed = true;
         }
     }
 }

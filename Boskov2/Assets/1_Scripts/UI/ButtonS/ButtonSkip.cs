@@ -11,7 +11,7 @@ namespace Boskov.UI
         public override void Do()
         {
             GameObject.Find("ScoreDisplay").GetComponent<ScoreManager>().SetScore();
-            GameObject.Find("OtherButtonManager").GetComponent<UIButtonSelection>().isUsed = true;
+            GameObject.Find("OtherButtonManager").GetComponent<UIButtonSelection>().Activate();
             GameObject.Find("CanvasSaveScore").SetActive(false);
         }
     }

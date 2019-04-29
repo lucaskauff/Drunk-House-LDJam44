@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/0_Scenes/LucasTestScene2.unity
     guid: c703a4bb3464e4849a56b341d8f9a3cb
+  - enabled: 1
+    path: Assets/0_Scenes/End_Screen.unity
+    guid: 01bbd9bdfbf7a464bad61612e12970cb
   m_configObjects: {}

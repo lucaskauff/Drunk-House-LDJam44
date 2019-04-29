@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartAnimation : MonoBehaviour
 {
@@ -46,6 +47,7 @@ public class StartAnimation : MonoBehaviour
         yield return new WaitForSecondsRealtime(4);
 
         ResetPos();
+        SceneManager.LoadSceneAsync(2);
         gameObject.SetActive(false);
     }
 

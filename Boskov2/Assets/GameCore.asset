@@ -23,10 +23,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0226e648d1ddcc745b9eb75ab835c68b, type: 2}
   - {fileID: 11400000, guid: 5e69ff54bfff5804392b7a7f1188734b, type: 2}
   VladimirState: {fileID: 11400000, guid: 118c9001b2414b04087d8e9ca136c9cf, type: 2}
-  timePlayed: 11.019574
-  finished: 0
-  score: 125.79819
-  scoreRounded: 126
+  timePlayed: 9.744912
+  finished: 1
+  score: 1.5827218
+  scoreRounded: 2
   scores:
   - name: Elie
-    score: 4652
+    score: 4976

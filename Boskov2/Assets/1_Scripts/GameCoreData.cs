@@ -37,6 +37,8 @@ namespace Boskov
             SaveScore save = new SaveScore(JsonUtility.FromJson<Score[]>(File.ReadAllText(filePath)));
 
             scores = save.score;
+
+            if (scores.Length == 0) scores = new Score[] { new Score("Elie", 4976) };
         }
 
         public void SaveScore(Score _score)

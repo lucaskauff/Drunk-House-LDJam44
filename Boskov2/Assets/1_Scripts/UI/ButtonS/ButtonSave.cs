@@ -16,7 +16,7 @@ namespace Boskov.UI
             TextMeshProUGUI name = GameObject.Find("TextNamePlayer").GetComponent<TextMeshProUGUI>();
             gameCore.SaveScore(new Scores.Score(name.text, gameCore.scoreRounded));
             GameObject.Find("ScoreDisplay").GetComponent<ScoreManager>().SetScore();
-            GameObject.Find("OtherButtonManager").GetComponent<UIButtonSelection>().isUsed = true;
+            GameObject.Find("OtherButtonManager").GetComponent<UIButtonSelection>().Activate();
             GameObject.Find("CanvasSaveScore").SetActive(false);
         }
     }

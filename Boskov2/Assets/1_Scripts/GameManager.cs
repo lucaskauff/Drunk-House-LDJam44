@@ -13,6 +13,7 @@ namespace Boskov
         {
             gameCore.LoadSave();
             gameCore.finished = false;
+            Time.timeScale = 1;
         }
 
         // Start is called before the first frame update
