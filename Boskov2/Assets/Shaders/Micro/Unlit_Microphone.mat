@@ -25,5 +25,5 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _IsRed: 0
-    - _MicroInput: 0.005966574
+    - _MicroInput: 0.021696657
     m_Colors: []
