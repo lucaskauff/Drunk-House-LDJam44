@@ -14,8 +14,9 @@ namespace Boskov
         public Features.Features[] features;
         [Header("Game Data")]
         public Vladimir.VladimirState VladimirState;
-        public int score;
+        public float score;
         public float timePlayed;
+        public bool finished;
     }
 
 }

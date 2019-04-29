@@ -17,7 +17,7 @@ namespace Boskov.Vladimir
         {
             sleep.Initialize();
             energy.Initialize();
-            heartBeat.Initialize();
+            heartBeat.Initialize(85);
             deafness.Initialize();
         }
 

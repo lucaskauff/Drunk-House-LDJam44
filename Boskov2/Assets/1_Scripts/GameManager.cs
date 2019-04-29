@@ -12,19 +12,37 @@ namespace Boskov
         // Start is called before the first frame update
         void Start()
         {
-            gameCore.score = 0;
+            gameCore.score = 1;
+            gameCore.timePlayed = 0;
         }
 
         // Update is called once per frame
         void Update()
         {
-            IncreaseScore();
+            if(!gameCore.finished)IncreaseScore();
+            if (gameCore.VladimirState.heartBeat.current >= 220 || gameCore.VladimirState.heartBeat.current <= 0 || gameCore.VladimirState.sleep.current <= 0) StartCoroutine(Finish());
         }
 
         private void IncreaseScore()
         {
             gameCore.timePlayed += Time.deltaTime;
-            gameCore.score = Mathf.RoundToInt((Mathf.Pow(gameCore.score,2)/60) * Time.deltaTime);
+            gameCore.score = (Mathf.Pow(gameCore.timePlayed, 2)/60);
         }
+
+        private IEnumerator Finish()
+        {
+            gameCore.finished = true;
+            float time = 0;
+            while (time < 1)
+            {
+                time += .05f;
+                Time.timeScale = 1 - time;
+                yield return new WaitForSecondsRealtime(.05f);
+            }
+
+            Time.timeScale = 0;
+        }
+
+
     }
 }

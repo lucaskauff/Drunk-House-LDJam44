@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8c74e8a7c152d241aca5dffedc6d90b, type: 3}
   m_Name: Voice
   m_EditorClassIdentifier: 
-  gameCore: {fileID: 0}
+  gameCore: {fileID: 11400000, guid: 81c92601eb95bdc409c51e9937753499, type: 2}
   duration: 0
   delay: 0
   coolDown: 0
-  sleep: 0
-  energy: 0
+  sleep: 15
+  energy: 10
   deafness: 0
   heartbeat: 0
