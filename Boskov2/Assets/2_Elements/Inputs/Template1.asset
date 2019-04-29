@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Voice: 0d000000
   Water: 10000000
-  PlayMusic: 060000000c000000
+  PlayMusic: 06000000
   Coffeenjection: 0f000000
   Chair: 0e000000
   Generator: 08000000
