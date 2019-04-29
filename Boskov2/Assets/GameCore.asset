@@ -27,3 +27,6 @@ MonoBehaviour:
   finished: 0
   score: 125.79819
   scoreRounded: 126
+  scores:
+  - name: Elie
+    score: 4652

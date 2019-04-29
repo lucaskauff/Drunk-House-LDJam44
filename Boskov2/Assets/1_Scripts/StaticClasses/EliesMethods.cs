@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Boskov.Scores;
 
 namespace Boskov
 {
     public static class EliesMethods
     {
-        public static List<T> ToList<T>(this T[] _array)
+        public static List<T> ToList2<T>(this T[] _array)
         {
             List<T> result = new List<T>();
 

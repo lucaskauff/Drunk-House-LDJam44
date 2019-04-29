@@ -40,9 +40,18 @@ namespace Boskov
         public void SaveScore(Score _score)
         {
             List<Score> tmp = scores.ToList();
-            tmp.Add(_score);
 
-            tmp = (List<Score>)tmp.OrderBy(item => item.score);
+            for (int i = 0; i < tmp.Count; i++)
+            {
+                if(_score.score > tmp[i].score)
+                {
+                    tmp.Insert(i, _score);
+                }
+                else if (i == tmp.Count-1)
+                {
+                    tmp.Add(_score);
+                }
+            }
 
             while (tmp.Count>10)
             {
