@@ -42,7 +42,7 @@ namespace Boskov
             while (time < 1)
             {
                 time += .05f;
-                Time.timeScale = 1 - time;
+                Time.timeScale = Mathf.Clamp01(1 - time);
                 yield return new WaitForSecondsRealtime(.05f);
             }
 

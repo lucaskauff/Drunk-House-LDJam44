@@ -23,6 +23,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0226e648d1ddcc745b9eb75ab835c68b, type: 2}
   - {fileID: 11400000, guid: 5e69ff54bfff5804392b7a7f1188734b, type: 2}
   VladimirState: {fileID: 11400000, guid: 118c9001b2414b04087d8e9ca136c9cf, type: 2}
-  score: 4656.9893
-  timePlayed: 528.6013
-  finished: 1
+  timePlayed: 86.8786
+  finished: 0
+  score: 125.79819
+  scoreRounded: 126
