@@ -23,8 +23,11 @@ namespace Boskov.Features
             if (gameCore.Voice.valid)
             {
                 float value = sleep * Time.deltaTime * (gameCore.VladimirState.deafness.current / gameCore.VladimirState.deafness.max);
-                Debug.Log(value);
                 gameCore.VladimirState.sleep.Increase(value);
+
+                float hearing = deafness * Time.deltaTime;
+                gameCore.VladimirState.deafness.Decrease(hearing);
+
             }
         }
 

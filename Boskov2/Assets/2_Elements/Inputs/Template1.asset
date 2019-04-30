@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4309d6a80579a44499a4ccabc76e6d34, type: 3}
   m_Name: Template1
   m_EditorClassIdentifier: 
-  Voice: 0d000000
+  Voice: 07000000
   Water: 10000000
   PlayMusic: 06000000
   Coffeenjection: 0f000000

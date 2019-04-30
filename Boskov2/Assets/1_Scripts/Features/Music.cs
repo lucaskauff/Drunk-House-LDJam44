@@ -62,7 +62,8 @@ namespace Boskov.Features
         void AffectDeaf()
         {
             gameCore.VladimirState.deafness.Decrease(deafness * Time.deltaTime);
-            gameCore.VladimirState.sleep.Increase(sleep * Time.deltaTime);
+            float value = sleep * Time.deltaTime * (gameCore.VladimirState.deafness.current / gameCore.VladimirState.deafness.max);
+            gameCore.VladimirState.sleep.Increase(value);
         }
     }
 }

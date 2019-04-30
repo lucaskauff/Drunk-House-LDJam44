@@ -16,7 +16,8 @@ MonoBehaviour:
   duration: 3
   delay: 2
   coolDown: 2
-  sleep: 3
+  sleep: 10
   energy: 2
   deafness: 3
   heartbeat: 0
+  onCoolDown: 0
